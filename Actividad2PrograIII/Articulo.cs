@@ -37,5 +37,6 @@ namespace Actividad2PrograIII
 
         public string Imagen { get {return _imagen; } set { _imagen=value; } }
 
+
     }
 }
