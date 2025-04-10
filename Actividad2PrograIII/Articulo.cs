@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,8 @@ namespace Actividad2PrograIII
         private int _codArticulo;
         private string _descripcion;
         private float _precio;
-        //imagen?
+        private string _imagen;
+
 
         private Marca _marca;
         private Categoria _categoria;
@@ -25,14 +27,15 @@ namespace Actividad2PrograIII
             set { _codArticulo = value; }
         }
 
-        public Marca Marca { get { return Marca; } set { _marca = value; } }
+        public Marca Marca { get { return _marca; } set { _marca = value; } }
 
-        public string DescripciOn { get { return _descripcion; } set {  _descripcion = value; } }
+        public string Descripcion { get { return _descripcion; } set {  _descripcion = value; } }
 
         public  Categoria Categoria { get { return _categoria; } set { _categoria = value; } }
 
         public float Precio { get { return _precio; } set { _precio = value; } }
 
+        public string Imagen { get {return _imagen; } set { _imagen=value; } }
 
     }
 }
