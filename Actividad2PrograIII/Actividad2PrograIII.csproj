@@ -56,7 +56,9 @@
     </Compile>
     <Compile Include="GestionArticulos.cs" />
     <Compile Include="GestionCategoria.cs" />
+    <Compile Include="GestionImagen.cs" />
     <Compile Include="GestionMarca.cs" />
+    <Compile Include="Imagen.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

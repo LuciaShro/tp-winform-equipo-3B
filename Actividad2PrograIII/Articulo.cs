@@ -10,16 +10,23 @@ namespace Actividad2PrograIII
 {
     internal class Articulo
     {
+        private int _idArticulo;
         private int _codArticulo;
         private string _descripcion;
         private float _precio;
-        private string _imagen;
 
 
         private Marca _marca;
         private Categoria _categoria;
+        private Imagen _imagen;
 
         public Articulo() {}
+
+        public int IDArticulo
+        {
+            get { return _idArticulo; }
+            set { _idArticulo = value; }
+        }
 
         public int codArticulo
         {
@@ -33,9 +40,10 @@ namespace Actividad2PrograIII
 
         public  Categoria Categoria { get { return _categoria; } set { _categoria = value; } }
 
+        public Imagen Imagen { get { return _imagen; } set { _imagen = value; } }
+
         public float Precio { get { return _precio; } set { _precio = value; } }
 
-        public string Imagen { get {return _imagen; } set { _imagen=value; } }
 
 
     }
