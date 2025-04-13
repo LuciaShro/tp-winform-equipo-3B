@@ -16,5 +16,19 @@ namespace Actividad2PrograIII
         {
             InitializeComponent();
         }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            
+            foreach(var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(SeccionArticulos))
+                    return;
+            }
+            
+            SeccionArticulos ventana = new SeccionArticulos();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }

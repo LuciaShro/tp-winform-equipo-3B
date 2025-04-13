@@ -11,14 +11,18 @@ namespace Actividad2PrograIII
         private int _idImagen;
         private string _ImagenURL;
 
-        public Imagen()
+        private Articulo _articulo;
+
+        public Imagen(int id, string url, Articulo articulo)
         {
            _idImagen = 0;
             _ImagenURL = "url";
+            _articulo = articulo;
         }
 
         public int IDImagen { get { return _idImagen;} set { _idImagen = value; } }
         public string ImagenURL {get { return _ImagenURL;} set { _ImagenURL = value; } }
 
+        public Articulo Articulo { get { return _articulo; } set { Articulo = value; } }
     }
 }
