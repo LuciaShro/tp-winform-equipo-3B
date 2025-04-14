@@ -64,8 +64,12 @@ namespace Actividad2PrograIII
                     aux.Categoria.Id = (int)lector["IdCategoria"];
                     aux.Precio = (decimal)lector["Precio"];
 
+
+
+
                     lista.Add(aux);
-                } 
+                }
+
                
                 conexion.Close();
                 return lista;

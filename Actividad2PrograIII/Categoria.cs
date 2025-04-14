@@ -20,8 +20,8 @@ namespace Actividad2PrograIII
                 return _id; 
             } 
             set 
-            { 
-                if(_id > 0) _id = value; 
+            {
+                if (value > 0) _id = value;
             } 
         }
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
