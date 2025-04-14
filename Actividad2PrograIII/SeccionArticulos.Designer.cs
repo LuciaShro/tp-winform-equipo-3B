@@ -53,7 +53,7 @@
             this.panelArticulos.Controls.Add(this.lblArticulos);
             this.panelArticulos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelArticulos.Location = new System.Drawing.Point(0, 0);
-            this.panelArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.panelArticulos.Name = "panelArticulos";
             this.panelArticulos.Size = new System.Drawing.Size(771, 48);
             this.panelArticulos.TabIndex = 0;
@@ -94,7 +94,7 @@
             // btnBuscarArt
             // 
             this.btnBuscarArt.Location = new System.Drawing.Point(222, 58);
-            this.btnBuscarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarArt.Name = "btnBuscarArt";
             this.btnBuscarArt.Size = new System.Drawing.Size(69, 27);
             this.btnBuscarArt.TabIndex = 3;
@@ -104,7 +104,7 @@
             // btnFiltrarArt
             // 
             this.btnFiltrarArt.Location = new System.Drawing.Point(559, 61);
-            this.btnFiltrarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltrarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltrarArt.Name = "btnFiltrarArt";
             this.btnFiltrarArt.Size = new System.Drawing.Size(69, 27);
             this.btnFiltrarArt.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.btnLimpiarArt.BackColor = System.Drawing.Color.CadetBlue;
             this.btnLimpiarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarArt.Location = new System.Drawing.Point(674, 58);
-            this.btnLimpiarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarArt.Name = "btnLimpiarArt";
             this.btnLimpiarArt.Size = new System.Drawing.Size(79, 31);
             this.btnLimpiarArt.TabIndex = 5;
@@ -126,7 +126,7 @@
             // txtBoxBusArt
             // 
             this.txtBoxBusArt.Location = new System.Drawing.Point(71, 64);
-            this.txtBoxBusArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxBusArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBusArt.Name = "txtBoxBusArt";
             this.txtBoxBusArt.Size = new System.Drawing.Size(138, 20);
             this.txtBoxBusArt.TabIndex = 6;
@@ -134,7 +134,7 @@
             // txtboxFiltrarArt
             // 
             this.txtboxFiltrarArt.Location = new System.Drawing.Point(406, 64);
-            this.txtboxFiltrarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxFiltrarArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtboxFiltrarArt.Name = "txtboxFiltrarArt";
             this.txtboxFiltrarArt.Size = new System.Drawing.Size(138, 20);
             this.txtboxFiltrarArt.TabIndex = 7;
@@ -144,7 +144,7 @@
             this.btnAgregarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnAgregarArt.Location = new System.Drawing.Point(29, 326);
-            this.btnAgregarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarArt.Name = "btnAgregarArt";
             this.btnAgregarArt.Size = new System.Drawing.Size(144, 32);
             this.btnAgregarArt.TabIndex = 9;
@@ -156,7 +156,7 @@
             this.btnEditarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnEditarArt.Location = new System.Drawing.Point(207, 326);
-            this.btnEditarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarArt.Name = "btnEditarArt";
             this.btnEditarArt.Size = new System.Drawing.Size(144, 32);
             this.btnEditarArt.TabIndex = 10;
@@ -168,7 +168,7 @@
             this.btnEliminarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnEliminarArt.Location = new System.Drawing.Point(374, 326);
-            this.btnEliminarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarArt.Name = "btnEliminarArt";
             this.btnEliminarArt.Size = new System.Drawing.Size(144, 32);
             this.btnEliminarArt.TabIndex = 11;
@@ -179,9 +179,10 @@
             // 
             this.pictureBoxArt.BackColor = System.Drawing.Color.Ivory;
             this.pictureBoxArt.Location = new System.Drawing.Point(568, 101);
-            this.pictureBoxArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxArt.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxArt.Name = "pictureBoxArt";
             this.pictureBoxArt.Size = new System.Drawing.Size(195, 209);
+            this.pictureBoxArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxArt.TabIndex = 12;
             this.pictureBoxArt.TabStop = false;
             // 
@@ -190,12 +191,13 @@
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.Ivory;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(13, 101);
-            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 62;
             this.dgvArticulos.RowTemplate.Height = 28;
             this.dgvArticulos.Size = new System.Drawing.Size(531, 209);
             this.dgvArticulos.TabIndex = 13;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // SeccionArticulos
             // 
@@ -215,7 +217,7 @@
             this.Controls.Add(this.lblFiltrarArt);
             this.Controls.Add(this.lblBuscarArt);
             this.Controls.Add(this.panelArticulos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SeccionArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionArticulos";

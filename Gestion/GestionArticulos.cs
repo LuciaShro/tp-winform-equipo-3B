@@ -18,7 +18,7 @@ namespace Gestion
             try
             {
              
-                datos.setearConsulta("SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio from ARTICULOS");
+                datos.setearConsulta("SELECT a.Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, ImagenUrl from ARTICULOS A, IMAGENES I where a.Id = i.IdArticulo");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -32,6 +32,8 @@ namespace Gestion
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Imagen = new Imagen();
+                    aux.Imagen.ImagenURL = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
