@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Actividad2PrograIII
+namespace Dominio
 {
-    internal class Imagen
+    public class Imagen
     {
         private int _idImagen;
         private string _ImagenURL;

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
 
-namespace Actividad2PrograIII
+namespace Gestion
 {
-    internal class GestionImagen
+    public class GestionImagen
     {
         // agregar imagen
 

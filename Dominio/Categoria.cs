@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Actividad2PrograIII
+namespace Dominio
 {
-    internal class Marca
+    public class Categoria
     {
         private int _id;
         private string _nombre;
-        public Marca() { }
-        
+
+        public Categoria() { }
+
         public int Id 
         { 
             get 
@@ -19,10 +20,10 @@ namespace Actividad2PrograIII
                 return _id; 
             } 
             set 
-            { 
-                if(_id > 0) _id = value; 
+            {
+                if (value > 0) _id = value;
             } 
         }
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
     }
-}
+} 

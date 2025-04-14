@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+using Dominio;
 
-namespace Actividad2PrograIII
+namespace Gestion
 {
-    internal class GestionCategoria
+    public class GestionCategoria
     {
 
         //Agregar Categoria
@@ -68,8 +68,8 @@ namespace Actividad2PrograIII
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo abrir la tabla Categoria");
-                throw;
+                
+                throw ex;
             }
             finally
             {

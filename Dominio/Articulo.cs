@@ -4,11 +4,12 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Actividad2PrograIII
+
+
+namespace Dominio
 {
-    internal class Articulo
+    public class Articulo
     {
         private int _idArticulo;
         private string _codArticulo;
