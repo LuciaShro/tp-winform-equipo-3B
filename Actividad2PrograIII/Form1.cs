@@ -43,5 +43,18 @@ namespace Actividad2PrograIII
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            foreach(var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(SeccionMarca))
+                    return;
+            }
+
+            SeccionMarca ventana = new SeccionMarca();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }
