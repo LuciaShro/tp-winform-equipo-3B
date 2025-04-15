@@ -51,14 +51,27 @@ namespace Gestion
          
         }
 
+        public void AgregarArticulos(Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +"VALUES ('" + articulo.codArticulo + "','" + articulo.Nombre + "','" + articulo.Descripcion + "'," + articulo.Marca.Id + "," + articulo.Categoria.Id + "," + articulo.Precio + ")");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
     }
 }
-
-//Agregar articulos
-/*public void AgregarArticulos (Articulo articulo)
-{
-}*/
 
 //Modificar articulos
 //public bool ModificarArticulo(int codArticulo)

@@ -47,5 +47,11 @@ namespace Actividad2PrograIII
                 pictureBoxArt.Load("https://media.istockphoto.com/id/1415203156/es/vector/p%C3%A1gina-de-error-icono-vectorial-de-p%C3%A1gina-no-encontrada-en-el-dise%C3%B1o-de-estilo-de-l%C3%ADnea.jpg?s=612x612&w=0&k=20&c=nss_aWPtTb0hpc4oiGfFs_PGfihrNwVX06wxkWVkBfQ=");
             }
         }
+
+        private void btnAgregarArt_Click(object sender, EventArgs e)
+        {
+            SeccionAgregarArtcs alta = new SeccionAgregarArtcs();
+            alta.ShowDialog();
+        }
     }
 }
