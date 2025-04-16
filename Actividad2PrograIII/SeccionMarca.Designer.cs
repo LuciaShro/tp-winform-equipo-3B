@@ -173,6 +173,7 @@
             this.btnAgregarMarca.TabIndex = 20;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // btnEditarMarca
             // 

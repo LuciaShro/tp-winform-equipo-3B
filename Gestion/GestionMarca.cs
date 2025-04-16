@@ -10,9 +10,6 @@ namespace Gestion
 {
     public class GestionMarca
     {
-        /*public void AgregarMarca(Marca marca)
-        {
-        }*/
 
 
 
@@ -61,6 +58,28 @@ namespace Gestion
             finally { 
                 datos.cerrarConexion();
             }
+        }
+
+        public void Agregar(Marca marca) {
+
+            AccesoDatos datos = new AccesoDatos();
+
+
+            try
+            {
+                datos.setearConsulta("Insert into MARCAS (Descripcion) values ('" + marca.Nombre + "')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        
         }
     }
 }

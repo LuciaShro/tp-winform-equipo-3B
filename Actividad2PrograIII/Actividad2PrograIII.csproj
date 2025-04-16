@@ -60,6 +60,12 @@
     <Compile Include="SeccionAgregarArtcs.Designer.cs">
       <DependentUpon>SeccionAgregarArtcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeccionAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeccionAgregarMarca.Designer.cs">
+      <DependentUpon>SeccionAgregarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeccionArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="SeccionAgregarArtcs.resx">
       <DependentUpon>SeccionAgregarArtcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeccionAgregarMarca.resx">
+      <DependentUpon>SeccionAgregarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeccionArticulos.resx">
       <DependentUpon>SeccionArticulos.cs</DependentUpon>

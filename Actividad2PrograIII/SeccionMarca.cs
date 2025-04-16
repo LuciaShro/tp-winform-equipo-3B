@@ -24,5 +24,11 @@ namespace Actividad2PrograIII
             dgvMarcas.DataSource = marca.listarMarca();
 
         }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            SeccionAgregarMarca agregar = new SeccionAgregarMarca();
+            agregar.ShowDialog();
+        }
     }
 }
