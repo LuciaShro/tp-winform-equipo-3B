@@ -10,7 +10,7 @@ namespace Dominio
     {
         private int _id;
         private string _nombre;
-        public Marca() { }
+        //public Marca() { }
         
         public int Id 
         {
@@ -27,11 +27,10 @@ namespace Dominio
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
 
 
-        //Ver por que no funciona
 
-        //public override string ToString()
-        //{
-        //    return Nombre;
-        //}
+        public override string ToString()
+        {
+            return _nombre;
+        }
     }
 }

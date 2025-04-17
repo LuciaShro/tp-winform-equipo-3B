@@ -31,7 +31,7 @@ namespace Actividad2PrograIII
 
             try
             {
-                art.IDArticulo = int.Parse(txbIdAart.Text);
+                //art.IDArticulo = int.Parse(txbIdAart.Text);
                 art.codArticulo = txbCodigoArt.Text;
                 art.Nombre = txbNombreARt.Text;
                 art.Descripcion = txbDescArt.Text;
@@ -52,6 +52,20 @@ namespace Actividad2PrograIII
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        private void SeccionAgregarArtcs_Load(object sender, EventArgs e)
+        {
+            //GestionArticulos art = new GestionArticulos();
+
+            //try
+            //{
+            //    cmbboxMarca.DataSource = art.listar();
+            //    cmbBoxCategoria.DataSource = art.listar();
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString());
+            //}
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Actividad2PrograIII
             GestionArticulos gestion = new GestionArticulos();
             listaArticulo = gestion.listar(); //DataSourse -> grilla de datos
             dgvArticulos.DataSource = listaArticulo;
-            //dgvArticulos.Columns["ImagenUrl"].Visible = false; // Ver por que no funciona
+            dgvArticulos.Columns["Imagen"].Visible = false;
             cargarImagen(listaArticulo[0].Imagen.ImagenURL);
         }
 

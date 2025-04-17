@@ -17,14 +17,14 @@ namespace Dominio
         private string _descripcion;
         private decimal _precio;
 
-        private Marca _marca;
-        private Categoria _categoria;
+        //private Marca _marca;
+        //private Categoria _categoria;
         private Imagen _imagen;
 
         public Articulo()
         {
-            Marca = new Marca();
-            Categoria = new Categoria();
+            //Marca = new Marca();
+            //Categoria = new Categoria();
         }
 
         public int IDArticulo
@@ -41,11 +41,11 @@ namespace Dominio
 
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
 
-        public Marca Marca { get { return _marca; } set { _marca = value; } }
+        public Marca Marca { get; set; }
 
         public string Descripcion { get { return _descripcion; } set {  _descripcion = value; } }
 
-        public  Categoria Categoria { get { return _categoria; } set { _categoria = value; } }
+        public  Categoria Categoria { get; set;}
 
         public Imagen Imagen { get { return _imagen; } set { _imagen = value; } }
 
