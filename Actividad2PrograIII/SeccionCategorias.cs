@@ -20,14 +20,20 @@ namespace Actividad2PrograIII
 
         private void SeccionCategorias_Load(object sender, EventArgs e)
         {
-            GestionCategoria categoria = new GestionCategoria();
-            dgvCategorias.DataSource = categoria.listarCategoria();
+            cargar();
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
             SeccionAgregarCategoria agregarCat = new SeccionAgregarCategoria();
             agregarCat.ShowDialog();
+            cargar();
+        }
+
+        private void cargar()
+        {
+            GestionCategoria categoria = new GestionCategoria();
+            dgvCategorias.DataSource = categoria.listarCategoria();
         }
     }
 }

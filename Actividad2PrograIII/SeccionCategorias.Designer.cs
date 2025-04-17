@@ -49,9 +49,12 @@
             // 
             this.dgvCategorias.BackgroundColor = System.Drawing.Color.Ivory;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvCategorias.Location = new System.Drawing.Point(12, 147);
+            this.dgvCategorias.MultiSelect = false;
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersWidth = 62;
+            this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategorias.Size = new System.Drawing.Size(529, 203);
             this.dgvCategorias.TabIndex = 0;
             // 
@@ -61,7 +64,7 @@
             this.panel1.Controls.Add(this.lblCategorias);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 48);
             this.panel1.TabIndex = 2;
@@ -97,7 +100,7 @@
             // btnBuscarCategoria
             // 
             this.btnBuscarCategoria.Location = new System.Drawing.Point(249, 84);
-            this.btnBuscarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCategoria.Name = "btnBuscarCategoria";
             this.btnBuscarCategoria.Size = new System.Drawing.Size(69, 27);
             this.btnBuscarCategoria.TabIndex = 5;
@@ -118,7 +121,7 @@
             // txtboxFiltrarCategoria
             // 
             this.txtboxFiltrarCategoria.Location = new System.Drawing.Point(401, 86);
-            this.txtboxFiltrarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxFiltrarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtboxFiltrarCategoria.Name = "txtboxFiltrarCategoria";
             this.txtboxFiltrarCategoria.Size = new System.Drawing.Size(138, 20);
             this.txtboxFiltrarCategoria.TabIndex = 8;
@@ -126,7 +129,7 @@
             // btnFiltrarCategoria
             // 
             this.btnFiltrarCategoria.Location = new System.Drawing.Point(554, 84);
-            this.btnFiltrarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltrarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltrarCategoria.Name = "btnFiltrarCategoria";
             this.btnFiltrarCategoria.Size = new System.Drawing.Size(69, 27);
             this.btnFiltrarCategoria.TabIndex = 9;
@@ -138,7 +141,7 @@
             this.btnLimpiarCategoria.BackColor = System.Drawing.Color.CadetBlue;
             this.btnLimpiarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCategoria.Location = new System.Drawing.Point(683, 84);
-            this.btnLimpiarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarCategoria.Name = "btnLimpiarCategoria";
             this.btnLimpiarCategoria.Size = new System.Drawing.Size(79, 31);
             this.btnLimpiarCategoria.TabIndex = 10;
@@ -150,7 +153,7 @@
             this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCategoria.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnAgregarCategoria.Location = new System.Drawing.Point(12, 383);
-            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(144, 32);
             this.btnAgregarCategoria.TabIndex = 11;
@@ -163,7 +166,7 @@
             this.btnEditarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCategoria.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnEditarCategoria.Location = new System.Drawing.Point(188, 383);
-            this.btnEditarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarCategoria.Name = "btnEditarCategoria";
             this.btnEditarCategoria.Size = new System.Drawing.Size(144, 32);
             this.btnEditarCategoria.TabIndex = 12;
@@ -175,7 +178,7 @@
             this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCategoria.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnEliminarCategoria.Location = new System.Drawing.Point(358, 383);
-            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(144, 32);
             this.btnEliminarCategoria.TabIndex = 13;
