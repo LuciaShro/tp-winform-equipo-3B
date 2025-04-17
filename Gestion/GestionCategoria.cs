@@ -11,10 +11,7 @@ namespace Gestion
     public class GestionCategoria
     {
 
-        //Agregar Categoria
-        /*public void AgregarCategoria(Categoria categoria)
-        {
-        } */
+     
 
         //Modificar Categoria
         //public bool ModificarCategoria(Categoria categoria)
@@ -31,10 +28,6 @@ namespace Gestion
         //{
         //}
 
-        //Listar categoria
-        //public void ListarCategoria()
-        //{
-        //}
 
         SqlConnection conexion = new SqlConnection();
         SqlCommand comando = new SqlCommand();
@@ -76,5 +69,27 @@ namespace Gestion
                 conexion.Close();
             }
         }
+
+        public void agregarCategoria(Categoria categoria)   
+        {
+                AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into CATEGORIAS (Descripcion) values (@Descripcion)");
+                datos.setearParametro("@Descripcion", categoria.Nombre);
+                datos.ejecutarAccion();
+
+            }
+
+            catch (Exception ex) 
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }

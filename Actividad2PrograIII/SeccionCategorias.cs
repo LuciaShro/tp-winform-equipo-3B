@@ -23,5 +23,11 @@ namespace Actividad2PrograIII
             GestionCategoria categoria = new GestionCategoria();
             dgvCategorias.DataSource = categoria.listarCategoria();
         }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            SeccionAgregarCategoria agregarCat = new SeccionAgregarCategoria();
+            agregarCat.ShowDialog();
+        }
     }
 }
