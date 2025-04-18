@@ -23,6 +23,11 @@ namespace Actividad2PrograIII
 
         private void SeccionArticulos_Load(object sender, EventArgs e)
         {
+            Cargar();
+        }
+
+        private void Cargar()
+        {
             GestionArticulos gestion = new GestionArticulos();
             listaArticulo = gestion.listar(); //DataSourse -> grilla de datos
             dgvArticulos.DataSource = listaArticulo;
@@ -52,6 +57,16 @@ namespace Actividad2PrograIII
         {
             SeccionAgregarArtcs alta = new SeccionAgregarArtcs();
             alta.ShowDialog();
+            Cargar();
+        }
+
+        private void btnEditarArt_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            SeccionAgregarArtcs editar = new SeccionAgregarArtcs(seleccionado);
+            editar.ShowDialog();
+            Cargar();
         }
     }
 }

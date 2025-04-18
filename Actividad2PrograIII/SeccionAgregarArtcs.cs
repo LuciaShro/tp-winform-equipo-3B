@@ -14,9 +14,18 @@ namespace Actividad2PrograIII
 {
     public partial class SeccionAgregarArtcs : Form
     {
+
+        private Articulo articulo = null;
         public SeccionAgregarArtcs()
         {
             InitializeComponent();
+        }
+
+        public SeccionAgregarArtcs(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar articulo";
         }
 
         private void btnCancelarArt_Click(object sender, EventArgs e)
@@ -26,26 +35,38 @@ namespace Actividad2PrograIII
 
         private void btnAceptarArt_Click(object sender, EventArgs e)
         {
-            Articulo art = new Articulo();
+            //Articulo art = new Articulo();
             GestionArticulos gestion = new GestionArticulos();
 
             try
             {
+                if (articulo == null)
+                   articulo = new Articulo();
                 //art.IDArticulo = int.Parse(txbIdAart.Text);
-                art.codArticulo = txbCodigoArt.Text;
-                art.Nombre = txbNombreARt.Text;
-                art.Descripcion = txbDescArt.Text;
-                art.Precio = decimal.Parse(txbPrecioArt.Text);
-                art.Marca = new Marca();
-                art.Marca.Id = int.Parse(txbMarcaArt.Text);
-                art.Categoria = new Categoria();
-                art.Categoria.Id = int.Parse(txbCatArt.Text);
-                art.Imagen = new Imagen();
-                art.Imagen.ImagenURL = txbImgArt.Text;
+                articulo.codArticulo = txbCodigoArt.Text;
+                articulo.Nombre = txbNombreARt.Text;
+                articulo.Descripcion = txbDescArt.Text;
+                articulo.Precio = decimal.Parse(txbPrecioArt.Text);
+                articulo.Marca = new Marca();
+                articulo.Marca.Id = int.Parse(txbMarcaArt.Text);
+                articulo.Categoria = new Categoria();
+                articulo.Categoria.Id = int.Parse(txbCatArt.Text);
+                articulo.Imagen = new Imagen();
+                articulo.Imagen.ImagenURL = txbImgArt.Text;
 
-                gestion.AgregarArticulos(art);
-                MessageBox.Show("Agregado exitosamente");
-                Close();
+                if (articulo.IDArticulo != 0)
+                {
+                    gestion.ModificarArticulo(articulo);
+                    MessageBox.Show("Modificado exitosamente");
+                    Close();
+                }
+                else
+                {
+                    gestion.AgregarArticulos(articulo);
+                    MessageBox.Show("Agregado exitosamente");
+                }
+                    
+                
 
             }
             catch(Exception ex)
@@ -55,7 +76,18 @@ namespace Actividad2PrograIII
         }
         private void SeccionAgregarArtcs_Load(object sender, EventArgs e)
         {
-            //GestionArticulos art = new GestionArticulos();
+            GestionArticulos art = new GestionArticulos();
+
+            if (articulo != null) {
+                txbCodigoArt.Text = articulo.codArticulo;
+                txbNombreARt.Text = articulo.Nombre;
+                txbDescArt.Text = articulo.Descripcion;
+                txbPrecioArt.Text = articulo.Precio.ToString();
+                txbMarcaArt.Text = articulo.Marca.Id.ToString();
+                txbCatArt.Text = articulo.Categoria.Id.ToString();
+                txbImgArt.Text = articulo.Imagen.ImagenURL;
+
+            }
 
             //try
             //{
