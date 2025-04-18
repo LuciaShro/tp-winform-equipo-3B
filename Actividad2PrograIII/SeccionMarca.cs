@@ -20,8 +20,23 @@ namespace Actividad2PrograIII
 
         private void SeccionMarca_Load(object sender, EventArgs e)
         {
+            cargar();
+
+        }
+
+        private void cargar ()
+        {
             GestionMarca marca = new GestionMarca();
-            dgvMarcas.DataSource = marca.listarMarca();
+
+            try
+            {
+                dgvMarcas.DataSource = marca.listarMarca();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
 
         }
 
@@ -29,6 +44,7 @@ namespace Actividad2PrograIII
         {
             SeccionAgregarMarca agregar = new SeccionAgregarMarca();
             agregar.ShowDialog();
+            cargar();
         }
     }
 }

@@ -43,7 +43,16 @@ namespace Gestion
                 {
                     Marca aux = new Marca();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Nombre = (string)datos.Lector["Descripcion"];
+
+
+                    // forma de realizar validacion null
+                    /*
+                    if(!(datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Descripcion"))))
+                    aux.Nombre = (string)datos.Lector["Descripcion"]; 
+                    */
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                      aux.Nombre = (string)datos.Lector["Descripcion"];
+
 
                     lista.Add(aux);
 

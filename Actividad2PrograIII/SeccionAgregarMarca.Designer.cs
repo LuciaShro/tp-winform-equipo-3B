@@ -64,12 +64,12 @@
             // 
             this.lblDescripcionMarca.AutoSize = true;
             this.lblDescripcionMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionMarca.Location = new System.Drawing.Point(54, 124);
+            this.lblDescripcionMarca.Location = new System.Drawing.Point(96, 126);
             this.lblDescripcionMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcionMarca.Name = "lblDescripcionMarca";
-            this.lblDescripcionMarca.Size = new System.Drawing.Size(98, 17);
+            this.lblDescripcionMarca.Size = new System.Drawing.Size(57, 17);
             this.lblDescripcionMarca.TabIndex = 11;
-            this.lblDescripcionMarca.Text = "Descripción:";
+            this.lblDescripcionMarca.Text = "Marca:";
             // 
             // txtDescripcionMarca
             // 
