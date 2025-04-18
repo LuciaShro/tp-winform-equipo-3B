@@ -45,15 +45,12 @@ namespace Actividad2PrograIII
             {
                 if (articulo == null)
                    articulo = new Articulo();
-                //art.IDArticulo = int.Parse(txbIdAart.Text);
                 articulo.codArticulo = txbCodigoArt.Text;
                 articulo.Nombre = txbNombreARt.Text;
                 articulo.Descripcion = txbDescArt.Text;
                 articulo.Precio = decimal.Parse(txbPrecioArt.Text);
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
-                //articulo.Marca.Id = int.Parse(txbImgArt.Text);
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
-                //articulo.Categoria.Id = int.Parse(txbCatArt.Text);
                 articulo.Imagen = new Imagen();
                 articulo.Imagen.ImagenURL = txbImgArt.Text;
 
@@ -84,21 +81,31 @@ namespace Actividad2PrograIII
             GestionCategoria cat = new GestionCategoria();
             GestionMarca marca = new GestionMarca();
 
-            if (articulo != null) {
-                txbCodigoArt.Text = articulo.codArticulo;
-                txbNombreARt.Text = articulo.Nombre;
-                txbDescArt.Text = articulo.Descripcion;
-                txbPrecioArt.Text = articulo.Precio.ToString();
-                txbImgArt.Text = articulo.Marca.Id.ToString();
-                //txbCatArt.Text = articulo.Categoria.Id.ToString();
-                //txbImgArt.Text = articulo.Imagen.ImagenURL;
-                
-
-            }
+            
             try
             {
                 cboCategoria.DataSource = cat.listarCategoria();
-                cboMarca.DataSource = marca.listarMarca();
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Nombre";
+;                cboMarca.DataSource = marca.listarMarca();
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Nombre";
+
+                if (articulo != null)
+                {
+                    txbCodigoArt.Text = articulo.codArticulo;
+                    txbNombreARt.Text = articulo.Nombre;
+                    txbDescArt.Text = articulo.Descripcion;
+                    txbPrecioArt.Text = articulo.Precio.ToString();
+                    txbImgArt.Text = articulo.Marca.Id.ToString();
+                    txbImgArt.Text = articulo.Imagen.ImagenURL;
+                    cboCategoria.SelectedValue = articulo.Categoria.Id;
+                    cboMarca.SelectedValue = articulo.Marca.Id;
+                    cargarImagen(articulo.Imagen.ImagenURL);
+                    
+
+
+                }
             }
             catch(Exception ex)
             {

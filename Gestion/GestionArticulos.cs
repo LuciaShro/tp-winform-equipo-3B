@@ -70,6 +70,9 @@ namespace Gestion
             {
                 datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values('" + articulo.codArticulo + "', '" + articulo.Nombre + "', '" + articulo.Descripcion + "', " + articulo.Marca.Id + ", " + articulo.Categoria.Id + ", " + articulo.Precio + ")");
                 datos.ejecutarAccion();
+                //datos.setearConsulta("UPDATE IMAGENES set ImagenUrl = @ImagenUrl WHERE Id = @Id");
+                //datos.setearParametro("@ImagenUrl", articulo.Imagen.ImagenURL);
+                //datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
@@ -95,6 +98,11 @@ namespace Gestion
                 datos.setearParametro("@IdMarca", articulo.Marca.Id);
                 datos.setearParametro("@IdCategoria", articulo.Categoria.Id);
                 datos.setearParametro("@Id", articulo.IDArticulo);
+                datos.ejecutarAccion();
+
+                //datos.setearConsulta("UPDATE IMAGENES set ImagenUrl = @ImagenUrl WHERE Id = @Id");
+                //datos.setearParametro("@ImagenUrl", articulo.Imagen.ImagenURL);
+                //datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
