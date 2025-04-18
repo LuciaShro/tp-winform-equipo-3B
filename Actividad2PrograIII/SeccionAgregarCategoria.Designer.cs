@@ -112,6 +112,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionAgregarCategoria";
+            this.Load += new System.EventHandler(this.SeccionAgregarCategoria_Load);
             this.pnlAgregarCategoria.ResumeLayout(false);
             this.pnlAgregarCategoria.PerformLayout();
             this.ResumeLayout(false);

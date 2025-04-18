@@ -11,13 +11,6 @@ namespace Gestion
     public class GestionCategoria
     {
 
-     
-
-        //Modificar Categoria
-        //public bool ModificarCategoria(Categoria categoria)
-        //{
-        //}
-
         //Eliminar Categoria
         //public bool EliminarCategoria(int IdCategoria) 
         //{ 
@@ -85,6 +78,31 @@ namespace Gestion
             {
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        //Modificar Categoria
+
+        public void modificarCategoria(Categoria modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update CATEGORIAS set Descripcion = @descripcion where Id= @id");
+                datos.setearParametro("@descripcion", modificar.Nombre);
+                datos.setearParametro("@id", modificar.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
             finally
             {
                 datos.cerrarConexion();

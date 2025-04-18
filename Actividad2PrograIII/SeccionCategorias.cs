@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
 using Gestion;
 
 namespace Actividad2PrograIII
@@ -21,6 +22,7 @@ namespace Actividad2PrograIII
         private void SeccionCategorias_Load(object sender, EventArgs e)
         {
             cargar();
+
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
@@ -34,6 +36,17 @@ namespace Actividad2PrograIII
         {
             GestionCategoria categoria = new GestionCategoria();
             dgvCategorias.DataSource = categoria.listarCategoria();
+            dgvCategorias.Columns["Id"].Visible = false;
+        }
+
+        private void btnEditarCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionada;
+            seleccionada = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+
+            SeccionAgregarCategoria editarCat = new SeccionAgregarCategoria(seleccionada);
+            editarCat.ShowDialog();
+            cargar();
         }
     }
 }
