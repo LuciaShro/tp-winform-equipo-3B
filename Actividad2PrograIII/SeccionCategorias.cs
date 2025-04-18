@@ -48,5 +48,29 @@ namespace Actividad2PrograIII
             editarCat.ShowDialog();
             cargar();
         }
+
+        private void btnEliminarCategoriaFisico_Click(object sender, EventArgs e)
+        {
+
+            GestionCategoria categoria = new GestionCategoria();
+            Categoria seleccionado;
+
+
+            try
+            {
+                DialogResult resultado = MessageBox.Show("¿Estas seguro que queres eliminar esta categoría?", "Eliminado", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                {
+                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    categoria.eliminarCategoria(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
