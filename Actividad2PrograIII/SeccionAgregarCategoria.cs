@@ -14,11 +14,20 @@ namespace Actividad2PrograIII
 {
     public partial class SeccionAgregarCategoria : Form
     {
+
+        private Categoria categoria = null;
         public SeccionAgregarCategoria()
         {
             InitializeComponent();
+            
         }
 
+        public SeccionAgregarCategoria(Categoria categoria)
+        {
+            InitializeComponent();
+            this.categoria = categoria;
+            Text = "Modificar Categoria";
+        }
         private void btnCancelarCategoria_Click(object sender, EventArgs e)
         {
             Close();
@@ -26,20 +35,54 @@ namespace Actividad2PrograIII
 
         private void btnAceptarCategoria_Click(object sender, EventArgs e)
         {
-            Categoria cat = new Categoria();
+          //Categoria cat = new Categoria();
             GestionCategoria gestionCat = new GestionCategoria();
             try
             {
-                cat.Nombre = txtAgregarCategoria.Text;
+                if(categoria== null)
+                    categoria = new Categoria();
 
-                gestionCat.agregarCategoria(cat);
-                MessageBox.Show("Agregado Exitosamente");
+
+                categoria.Nombre = txtAgregarCategoria.Text;
+
+
+                if (categoria.Id != 0)
+                {
+                    gestionCat.modificarCategoria(categoria);
+                    MessageBox.Show("Modificado Exitosamente");
+                }
+
+                else
+                {
+                    gestionCat.agregarCategoria(categoria);
+                    MessageBox.Show("Agregado Exitosamente");
+                }
+
                 Close();
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void SeccionAgregarCategoria_Load(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (categoria != null)
+                {
+                    
+                    txtAgregarCategoria.Text = categoria.Nombre;
+                    
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

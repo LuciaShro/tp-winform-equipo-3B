@@ -172,6 +172,7 @@
             this.btnEditarCategoria.TabIndex = 12;
             this.btnEditarCategoria.Text = "Editar";
             this.btnEditarCategoria.UseVisualStyleBackColor = true;
+            this.btnEditarCategoria.Click += new System.EventHandler(this.btnEditarCategoria_Click);
             // 
             // btnEliminarCategoria
             // 
