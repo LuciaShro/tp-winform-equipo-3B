@@ -53,19 +53,17 @@
             this.panelMarcas.Controls.Add(this.lblMarcas);
             this.panelMarcas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMarcas.Location = new System.Drawing.Point(0, 0);
-            this.panelMarcas.Margin = new System.Windows.Forms.Padding(2);
             this.panelMarcas.Name = "panelMarcas";
-            this.panelMarcas.Size = new System.Drawing.Size(800, 48);
+            this.panelMarcas.Size = new System.Drawing.Size(1200, 74);
             this.panelMarcas.TabIndex = 1;
             // 
             // lblMarcas
             // 
             this.lblMarcas.AutoSize = true;
             this.lblMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcas.Location = new System.Drawing.Point(2, 12);
-            this.lblMarcas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMarcas.Location = new System.Drawing.Point(3, 18);
             this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(136, 31);
+            this.lblMarcas.Size = new System.Drawing.Size(198, 46);
             this.lblMarcas.TabIndex = 1;
             this.lblMarcas.Text = "MARCAS";
             // 
@@ -73,27 +71,24 @@
             // 
             this.lblBuscarMarca.AutoSize = true;
             this.lblBuscarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarMarca.Location = new System.Drawing.Point(11, 63);
-            this.lblBuscarMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuscarMarca.Location = new System.Drawing.Point(16, 97);
             this.lblBuscarMarca.Name = "lblBuscarMarca";
-            this.lblBuscarMarca.Size = new System.Drawing.Size(70, 20);
+            this.lblBuscarMarca.Size = new System.Drawing.Size(100, 29);
             this.lblBuscarMarca.TabIndex = 2;
             this.lblBuscarMarca.Text = "Buscar:";
             // 
             // txtBoxBusMarca
             // 
-            this.txtBoxBusMarca.Location = new System.Drawing.Point(85, 63);
-            this.txtBoxBusMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoxBusMarca.Location = new System.Drawing.Point(128, 97);
             this.txtBoxBusMarca.Name = "txtBoxBusMarca";
-            this.txtBoxBusMarca.Size = new System.Drawing.Size(138, 20);
+            this.txtBoxBusMarca.Size = new System.Drawing.Size(205, 26);
             this.txtBoxBusMarca.TabIndex = 7;
             // 
             // btnBuscarMarca
             // 
-            this.btnBuscarMarca.Location = new System.Drawing.Point(239, 61);
-            this.btnBuscarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarMarca.Location = new System.Drawing.Point(358, 94);
             this.btnBuscarMarca.Name = "btnBuscarMarca";
-            this.btnBuscarMarca.Size = new System.Drawing.Size(69, 27);
+            this.btnBuscarMarca.Size = new System.Drawing.Size(104, 42);
             this.btnBuscarMarca.TabIndex = 8;
             this.btnBuscarMarca.Text = "Buscar";
             this.btnBuscarMarca.UseVisualStyleBackColor = true;
@@ -103,41 +98,37 @@
             this.dgvMarcas.BackgroundColor = System.Drawing.Color.Ivory;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcas.Location = new System.Drawing.Point(15, 132);
-            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMarcas.Location = new System.Drawing.Point(22, 203);
             this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 62;
             this.dgvMarcas.RowTemplate.Height = 28;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(531, 209);
+            this.dgvMarcas.Size = new System.Drawing.Size(796, 322);
             this.dgvMarcas.TabIndex = 14;
             // 
             // lblFiltrarMarca
             // 
             this.lblFiltrarMarca.AutoSize = true;
             this.lblFiltrarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrarMarca.Location = new System.Drawing.Point(332, 63);
-            this.lblFiltrarMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFiltrarMarca.Location = new System.Drawing.Point(498, 97);
             this.lblFiltrarMarca.Name = "lblFiltrarMarca";
-            this.lblFiltrarMarca.Size = new System.Drawing.Size(61, 20);
+            this.lblFiltrarMarca.Size = new System.Drawing.Size(89, 29);
             this.lblFiltrarMarca.TabIndex = 15;
             this.lblFiltrarMarca.Text = "Filtrar:";
             // 
             // txtboxFiltrarMarca
             // 
-            this.txtboxFiltrarMarca.Location = new System.Drawing.Point(397, 63);
-            this.txtboxFiltrarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtboxFiltrarMarca.Location = new System.Drawing.Point(596, 97);
             this.txtboxFiltrarMarca.Name = "txtboxFiltrarMarca";
-            this.txtboxFiltrarMarca.Size = new System.Drawing.Size(138, 20);
+            this.txtboxFiltrarMarca.Size = new System.Drawing.Size(205, 26);
             this.txtboxFiltrarMarca.TabIndex = 16;
             // 
             // btnFiltrarMarca
             // 
-            this.btnFiltrarMarca.Location = new System.Drawing.Point(551, 61);
-            this.btnFiltrarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltrarMarca.Location = new System.Drawing.Point(826, 94);
             this.btnFiltrarMarca.Name = "btnFiltrarMarca";
-            this.btnFiltrarMarca.Size = new System.Drawing.Size(69, 27);
+            this.btnFiltrarMarca.Size = new System.Drawing.Size(104, 42);
             this.btnFiltrarMarca.TabIndex = 17;
             this.btnFiltrarMarca.Text = "Filtrar";
             this.btnFiltrarMarca.UseVisualStyleBackColor = true;
@@ -146,10 +137,9 @@
             // 
             this.btnLimpiarMarca.BackColor = System.Drawing.Color.CadetBlue;
             this.btnLimpiarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarMarca.Location = new System.Drawing.Point(652, 58);
-            this.btnLimpiarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiarMarca.Location = new System.Drawing.Point(978, 89);
             this.btnLimpiarMarca.Name = "btnLimpiarMarca";
-            this.btnLimpiarMarca.Size = new System.Drawing.Size(79, 31);
+            this.btnLimpiarMarca.Size = new System.Drawing.Size(118, 48);
             this.btnLimpiarMarca.TabIndex = 18;
             this.btnLimpiarMarca.Text = "Limpiar";
             this.btnLimpiarMarca.UseVisualStyleBackColor = false;
@@ -157,10 +147,9 @@
             // pictureBoxMarca
             // 
             this.pictureBoxMarca.BackColor = System.Drawing.Color.Ivory;
-            this.pictureBoxMarca.Location = new System.Drawing.Point(594, 132);
-            this.pictureBoxMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxMarca.Location = new System.Drawing.Point(891, 203);
             this.pictureBoxMarca.Name = "pictureBoxMarca";
-            this.pictureBoxMarca.Size = new System.Drawing.Size(195, 209);
+            this.pictureBoxMarca.Size = new System.Drawing.Size(292, 322);
             this.pictureBoxMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMarca.TabIndex = 19;
             this.pictureBoxMarca.TabStop = false;
@@ -169,10 +158,9 @@
             // 
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMarca.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(15, 376);
-            this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(22, 578);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(144, 32);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(216, 49);
             this.btnAgregarMarca.TabIndex = 20;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
@@ -182,32 +170,31 @@
             // 
             this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarMarca.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEditarMarca.Location = new System.Drawing.Point(179, 376);
-            this.btnEditarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarMarca.Location = new System.Drawing.Point(268, 578);
             this.btnEditarMarca.Name = "btnEditarMarca";
-            this.btnEditarMarca.Size = new System.Drawing.Size(144, 32);
+            this.btnEditarMarca.Size = new System.Drawing.Size(216, 49);
             this.btnEditarMarca.TabIndex = 21;
             this.btnEditarMarca.Text = "Editar";
             this.btnEditarMarca.UseVisualStyleBackColor = true;
+            this.btnEditarMarca.Click += new System.EventHandler(this.btnEditarMarca_Click);
             // 
             // btnEliminarMarca
             // 
             this.btnEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMarca.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEliminarMarca.Location = new System.Drawing.Point(345, 376);
-            this.btnEliminarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(518, 578);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
-            this.btnEliminarMarca.Size = new System.Drawing.Size(144, 32);
+            this.btnEliminarMarca.Size = new System.Drawing.Size(216, 49);
             this.btnEliminarMarca.TabIndex = 22;
             this.btnEliminarMarca.Text = "Eliminar";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
             // 
             // SeccionMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.btnAgregarMarca);
@@ -221,6 +208,7 @@
             this.Controls.Add(this.txtBoxBusMarca);
             this.Controls.Add(this.lblBuscarMarca);
             this.Controls.Add(this.panelMarcas);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SeccionMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionMarca";

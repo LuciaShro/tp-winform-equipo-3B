@@ -14,9 +14,20 @@ namespace Actividad2PrograIII
 {
     public partial class SeccionAgregarMarca : Form
     {
+        private Marca marca = null;
+
+        public Marca Marca { get; set; }
+
         public SeccionAgregarMarca()
         {
             InitializeComponent();
+        }
+
+        public SeccionAgregarMarca(Marca marca)
+        {
+            InitializeComponent();
+            this.marca = marca;
+            Text = "Modificar Marca";
         }
 
         private void btnCancelarMarca_Click(object sender, EventArgs e)
@@ -26,14 +37,26 @@ namespace Actividad2PrograIII
 
         private void btnAceptarMarca_Click(object sender, EventArgs e)
         {
-            Marca nuevamarca = new Marca();
-            GestionMarca marca = new GestionMarca();
+            //Marca nuevamarca = new Marca();
+            GestionMarca gestion = new GestionMarca();
             try
             {
-                nuevamarca.Nombre=txtDescripcionMarca.Text;
+                if(marca == null)
+                    marca = new Marca();
 
-                marca.Agregar(nuevamarca);
-                MessageBox.Show("Nueva marca agregada exitosamente");
+                marca.Nombre=txtDescripcionMarca.Text;
+
+                if(marca.Id != 0)
+                {
+                    gestion.ModificarMarca(marca);
+                    MessageBox.Show("Modificado exitosamente");
+                }
+                else
+                {
+                    gestion.Agregar(marca);
+                    MessageBox.Show("Nueva marca agregada exitosamente");
+                }
+                    
                 Close();
 
             }
@@ -44,5 +67,12 @@ namespace Actividad2PrograIII
             }
         }
 
+        private void SeccionAgregarMarca_Load(object sender, EventArgs e)
+        {
+            if (marca != null)
+            {
+                txtDescripcionMarca.Text = marca.Nombre;
+            }
+        }
     }
 }

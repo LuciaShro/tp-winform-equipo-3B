@@ -47,7 +47,7 @@ namespace Actividad2PrograIII
             {
                 pictureBoxArt.Load(imagen);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 pictureBoxArt.Load("https://media.istockphoto.com/id/1415203156/es/vector/p%C3%A1gina-de-error-icono-vectorial-de-p%C3%A1gina-no-encontrada-en-el-dise%C3%B1o-de-estilo-de-l%C3%ADnea.jpg?s=612x612&w=0&k=20&c=nss_aWPtTb0hpc4oiGfFs_PGfihrNwVX06wxkWVkBfQ=");
             }
@@ -67,6 +67,27 @@ namespace Actividad2PrograIII
             SeccionAgregarArtcs editar = new SeccionAgregarArtcs(seleccionado);
             editar.ShowDialog();
             Cargar();
+        }
+
+        private void btnEliminarArt_Click(object sender, EventArgs e)
+        {
+            GestionArticulos GestionArt = new GestionArticulos();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Estas seguro que deseas eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    GestionArt.EliminarArticulos(seleccionado.IDArticulo);
+                    Cargar();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

@@ -47,7 +47,7 @@ namespace Dominio
 
         public  Categoria Categoria { get; set;}
 
-        public Imagen Imagen { get { return _imagen; } set { _imagen = value; } }
+        public Imagen Imagen { get; set; }
 
         public decimal Precio 
         { 
@@ -58,7 +58,8 @@ namespace Dominio
 
             set
             {
-                if (_precio >= 0) _precio = value;
+                if (value >= 0) 
+                    _precio = value;
             }
 
         }

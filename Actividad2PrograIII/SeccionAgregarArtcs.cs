@@ -49,7 +49,7 @@ namespace Actividad2PrograIII
                 articulo.Nombre = txbNombreARt.Text;
                 articulo.Descripcion = txbDescArt.Text;
                 articulo.Precio = decimal.Parse(txbPrecioArt.Text);
-                articulo.Marca = (Marca)cboMarca.SelectedItem;
+                articulo.Marca = (Marca)txtMarcaArt.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
                 articulo.Imagen = new Imagen();
                 articulo.Imagen.ImagenURL = txbImgArt.Text;
@@ -87,9 +87,9 @@ namespace Actividad2PrograIII
                 cboCategoria.DataSource = cat.listarCategoria();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Nombre";
-;                cboMarca.DataSource = marca.listarMarca();
-                cboMarca.ValueMember = "Id";
-                cboMarca.DisplayMember = "Nombre";
+;                txtMarcaArt.DataSource = marca.listarMarca();
+                txtMarcaArt.ValueMember = "Id";
+                txtMarcaArt.DisplayMember = "Nombre";
 
                 if (articulo != null)
                 {
@@ -97,10 +97,11 @@ namespace Actividad2PrograIII
                     txbNombreARt.Text = articulo.Nombre;
                     txbDescArt.Text = articulo.Descripcion;
                     txbPrecioArt.Text = articulo.Precio.ToString();
-                    txbImgArt.Text = articulo.Marca.Id.ToString();
+                    txtMarcaArt.Text = articulo.Marca.Id.ToString();
+                    //txbImgArt.Text = articulo.Marca.Id.ToString();
                     txbImgArt.Text = articulo.Imagen.ImagenURL;
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
-                    cboMarca.SelectedValue = articulo.Marca.Id;
+                    txtMarcaArt.SelectedValue = articulo.Marca.Id;
                     cargarImagen(articulo.Imagen.ImagenURL);
                     
 
