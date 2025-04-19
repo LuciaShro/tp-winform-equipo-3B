@@ -61,6 +61,7 @@
             // 
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblArticulos.Location = new System.Drawing.Point(3, 9);
             this.lblArticulos.Name = "lblArticulos";
             this.lblArticulos.Size = new System.Drawing.Size(246, 71);
@@ -118,7 +119,7 @@
             // 
             // txtBoxBusArt
             // 
-            this.txtBoxBusArt.Location = new System.Drawing.Point(106, 98);
+            this.txtBoxBusArt.Location = new System.Drawing.Point(118, 98);
             this.txtBoxBusArt.Name = "txtBoxBusArt";
             this.txtBoxBusArt.Size = new System.Drawing.Size(205, 26);
             this.txtBoxBusArt.TabIndex = 6;

@@ -35,7 +35,6 @@ namespace Actividad2PrograIII
 
         private void btnAceptarCategoria_Click(object sender, EventArgs e)
         {
-          //Categoria cat = new Categoria();
             GestionCategoria gestionCat = new GestionCategoria();
             try
             {

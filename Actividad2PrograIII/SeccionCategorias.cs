@@ -17,6 +17,7 @@ namespace Actividad2PrograIII
         public SeccionCategorias()
         {
             InitializeComponent();
+            Text = "Categorias";
         }
 
         private void SeccionCategorias_Load(object sender, EventArgs e)
@@ -71,6 +72,13 @@ namespace Actividad2PrograIII
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnFiltrarCategoria_Click(object sender, EventArgs e)
+        {
+            //List<Categoria> listaFiltrada;
+            //listaFiltrada = GestionCategoria.listarCategorias();
+
         }
     }
 }

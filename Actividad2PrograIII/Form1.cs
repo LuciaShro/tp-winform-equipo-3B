@@ -12,15 +12,17 @@ namespace Actividad2PrograIII
 {
     public partial class Form1 : Form
     {
+      
         public Form1()
         {
             InitializeComponent();
+            Text = "Inicio";
         }
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
-            
-            foreach(var item in Application.OpenForms)
+
+            foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(SeccionArticulos))
                     return;
@@ -33,7 +35,8 @@ namespace Actividad2PrograIII
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            foreach(var item in Application.OpenForms)
+
+            foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(SeccionCategorias)) 
                 return;
@@ -46,7 +49,8 @@ namespace Actividad2PrograIII
 
         private void btnMarcas_Click(object sender, EventArgs e)
         {
-            foreach(var item in Application.OpenForms)
+
+            foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(SeccionMarca))
                     return;

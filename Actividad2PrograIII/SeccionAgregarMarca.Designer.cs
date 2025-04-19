@@ -62,7 +62,7 @@
             // 
             this.lblDescripcionMarca.AutoSize = true;
             this.lblDescripcionMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionMarca.Location = new System.Drawing.Point(144, 194);
+            this.lblDescripcionMarca.Location = new System.Drawing.Point(133, 220);
             this.lblDescripcionMarca.Name = "lblDescripcionMarca";
             this.lblDescripcionMarca.Size = new System.Drawing.Size(79, 25);
             this.lblDescripcionMarca.TabIndex = 11;
@@ -70,7 +70,7 @@
             // 
             // txtDescripcionMarca
             // 
-            this.txtDescripcionMarca.Location = new System.Drawing.Point(254, 189);
+            this.txtDescripcionMarca.Location = new System.Drawing.Point(246, 221);
             this.txtDescripcionMarca.Name = "txtDescripcionMarca";
             this.txtDescripcionMarca.Size = new System.Drawing.Size(313, 26);
             this.txtDescripcionMarca.TabIndex = 15;
@@ -80,7 +80,7 @@
             this.btnAceptarMarca.BackColor = System.Drawing.SystemColors.Window;
             this.btnAceptarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarMarca.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAceptarMarca.Location = new System.Drawing.Point(176, 532);
+            this.btnAceptarMarca.Location = new System.Drawing.Point(213, 316);
             this.btnAceptarMarca.Name = "btnAceptarMarca";
             this.btnAceptarMarca.Size = new System.Drawing.Size(105, 40);
             this.btnAceptarMarca.TabIndex = 19;
@@ -93,7 +93,7 @@
             this.btnCancelarMarca.BackColor = System.Drawing.SystemColors.Window;
             this.btnCancelarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelarMarca.Location = new System.Drawing.Point(414, 531);
+            this.btnCancelarMarca.Location = new System.Drawing.Point(403, 314);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
             this.btnCancelarMarca.Size = new System.Drawing.Size(102, 42);
             this.btnCancelarMarca.TabIndex = 20;
