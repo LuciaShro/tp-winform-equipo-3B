@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCategorias = new System.Windows.Forms.Label();
             this.lblBuscarCategoria = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscarCategoria = new System.Windows.Forms.Button();
             this.lblFiltrarCategoria = new System.Windows.Forms.Label();
             this.txtboxFiltrarCategoria = new System.Windows.Forms.TextBox();
@@ -84,24 +84,24 @@
             // 
             this.lblBuscarCategoria.AutoSize = true;
             this.lblBuscarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarCategoria.Location = new System.Drawing.Point(18, 132);
+            this.lblBuscarCategoria.Location = new System.Drawing.Point(545, 136);
             this.lblBuscarCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscarCategoria.Name = "lblBuscarCategoria";
             this.lblBuscarCategoria.Size = new System.Drawing.Size(100, 29);
             this.lblBuscarCategoria.TabIndex = 3;
             this.lblBuscarCategoria.Text = "Buscar:";
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 132);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtBuscar.Location = new System.Drawing.Point(643, 137);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(205, 26);
+            this.txtBuscar.TabIndex = 4;
             // 
             // btnBuscarCategoria
             // 
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(374, 129);
+            this.btnBuscarCategoria.Location = new System.Drawing.Point(859, 129);
             this.btnBuscarCategoria.Name = "btnBuscarCategoria";
             this.btnBuscarCategoria.Size = new System.Drawing.Size(104, 42);
             this.btnBuscarCategoria.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.lblFiltrarCategoria.AutoSize = true;
             this.lblFiltrarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrarCategoria.Location = new System.Drawing.Point(504, 132);
+            this.lblFiltrarCategoria.Location = new System.Drawing.Point(65, 137);
             this.lblFiltrarCategoria.Name = "lblFiltrarCategoria";
             this.lblFiltrarCategoria.Size = new System.Drawing.Size(89, 29);
             this.lblFiltrarCategoria.TabIndex = 6;
@@ -120,14 +120,16 @@
             // 
             // txtboxFiltrarCategoria
             // 
-            this.txtboxFiltrarCategoria.Location = new System.Drawing.Point(602, 132);
+            this.txtboxFiltrarCategoria.Location = new System.Drawing.Point(155, 140);
             this.txtboxFiltrarCategoria.Name = "txtboxFiltrarCategoria";
             this.txtboxFiltrarCategoria.Size = new System.Drawing.Size(205, 26);
             this.txtboxFiltrarCategoria.TabIndex = 8;
+            this.txtboxFiltrarCategoria.TextChanged += new System.EventHandler(this.txtboxFiltrarCategoria_TextChanged);
+            this.txtboxFiltrarCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxFiltrarCategoria_KeyPress);
             // 
             // btnFiltrarCategoria
             // 
-            this.btnFiltrarCategoria.Location = new System.Drawing.Point(827, 124);
+            this.btnFiltrarCategoria.Location = new System.Drawing.Point(383, 132);
             this.btnFiltrarCategoria.Name = "btnFiltrarCategoria";
             this.btnFiltrarCategoria.Size = new System.Drawing.Size(104, 42);
             this.btnFiltrarCategoria.TabIndex = 9;
@@ -140,7 +142,7 @@
             this.btnLimpiarCategoria.BackColor = System.Drawing.Color.CadetBlue;
             this.btnLimpiarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCategoria.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarCategoria.Location = new System.Drawing.Point(999, 118);
+            this.btnLimpiarCategoria.Location = new System.Drawing.Point(1008, 123);
             this.btnLimpiarCategoria.Name = "btnLimpiarCategoria";
             this.btnLimpiarCategoria.Size = new System.Drawing.Size(118, 48);
             this.btnLimpiarCategoria.TabIndex = 10;
@@ -197,7 +199,7 @@
             this.Controls.Add(this.txtboxFiltrarCategoria);
             this.Controls.Add(this.lblFiltrarCategoria);
             this.Controls.Add(this.btnBuscarCategoria);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblBuscarCategoria);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCategorias);
@@ -220,7 +222,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCategorias;
         private System.Windows.Forms.Label lblBuscarCategoria;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscarCategoria;
         private System.Windows.Forms.Label lblFiltrarCategoria;
         private System.Windows.Forms.TextBox txtboxFiltrarCategoria;

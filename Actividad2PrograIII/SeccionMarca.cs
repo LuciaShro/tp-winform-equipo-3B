@@ -103,8 +103,6 @@ namespace Actividad2PrograIII
                 ListaBusqueda = ListaMarcas;
             }
 
-
-
                 dgvMarcas.DataSource = null;
             dgvMarcas.DataSource = ListaBusqueda;
         }
