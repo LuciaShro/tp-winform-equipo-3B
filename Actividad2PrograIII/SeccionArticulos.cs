@@ -24,6 +24,9 @@ namespace Actividad2PrograIII
         private void SeccionArticulos_Load(object sender, EventArgs e)
         {
             Cargar();
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Categoria");
         }
 
         private void Cargar()
@@ -124,5 +127,38 @@ namespace Actividad2PrograIII
             dgvArticulos.DataSource = listaArtFiltrada;
             ocultarColumnas();
         }
+
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();
+
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con con");
+                cboCriterio.Items.Add("Contiene");
+ 
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+
+            GestionArticulos gestion = new GestionArticulos();
+
+            try
+            {
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFlitro.Text;
+                dgvArticulos.DataSource = gestion.Filtrar(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            
+        }
+
+
     }
 }

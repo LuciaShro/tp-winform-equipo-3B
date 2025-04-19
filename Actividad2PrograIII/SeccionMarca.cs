@@ -24,6 +24,7 @@ namespace Actividad2PrograIII
         private void SeccionMarca_Load(object sender, EventArgs e)
         {
             cargar();
+            
         }
 
         private void cargar ()

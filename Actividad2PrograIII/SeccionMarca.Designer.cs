@@ -55,7 +55,7 @@
             this.panelMarcas.Location = new System.Drawing.Point(0, 0);
             this.panelMarcas.Margin = new System.Windows.Forms.Padding(2);
             this.panelMarcas.Name = "panelMarcas";
-            this.panelMarcas.Size = new System.Drawing.Size(800, 48);
+            this.panelMarcas.Size = new System.Drawing.Size(846, 48);
             this.panelMarcas.TabIndex = 1;
             // 
             // lblMarcas
@@ -212,7 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(846, 427);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.btnAgregarMarca);
@@ -226,9 +226,12 @@
             this.Controls.Add(this.txtBoxBusMarca);
             this.Controls.Add(this.lblBuscarMarca);
             this.Controls.Add(this.panelMarcas);
+            this.Location = new System.Drawing.Point(5, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SeccionMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SeccionMarca";
+            this.Text = "Seccion Marca";
             this.Load += new System.EventHandler(this.SeccionMarca_Load);
             this.panelMarcas.ResumeLayout(false);
             this.panelMarcas.PerformLayout();

@@ -133,8 +133,109 @@ namespace Gestion
                 throw ex;
             }
         }
+
+        public List<Articulo> Filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, A.IdCategoria, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo ";
+
+                if (campo == "Nombre")
+                {
+
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "A.Nombre like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "A.Nombre like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "A.Nombre like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                else if (campo == "Descripcion")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "M.Descripcion like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "M.Descripcion like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "M.Descripcion like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "C.Descripcion like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "C.Descripcion like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "C.Descripcion like '%" + filtro + "%'";
+                            break;
+
+                    }
+                }
+                
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo(); //Lo empezamos a cargar con los datos del lector de ese registro
+                    //aux.IDArticulo = lector.GetInt32(0); 
+                    aux.IDArticulo = (int)datos.Lector["Id"]; //Lo mismo que la linea de arriba
+                    if (!(datos.Lector["Codigo"] is DBNull))
+                        aux.codArticulo = (string)datos.Lector["Codigo"];
+                    if (!(datos.Lector["Nombre"] is DBNull))
+                        aux.Nombre = (string)datos.Lector["Nombre"];
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    /*if (!(datos.Lector["Marca"] is DBNull))
+                        aux.Marca.Nombre = (string)datos.Lector["Marca"]; */
+                    aux.Marca.Nombre = datos.Lector["Marca"] is DBNull ? "" : (string)datos.Lector["Marca"];
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    /* if (!(datos.Lector["Categoria"] is DBNull))
+                         aux.Categoria.Nombre = (string)datos.Lector["Categoria"];*/
+                    aux.Categoria.Nombre = datos.Lector["Categoria"] is DBNull ? "" : (string)datos.Lector["Categoria"];
+
+                    if (!(datos.Lector["Precio"] is DBNull))
+                        aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Imagen = new Imagen();
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.Imagen.ImagenURL = (string)datos.Lector["ImagenUrl"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+                }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        }
     }
-}
 
 //Modificar articulos
 //public bool ModificarArticulo(int codArticulo)
