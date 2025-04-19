@@ -63,6 +63,7 @@
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
+
             this.lblArticulos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             //this.lblArticulos.Location = new System.Drawing.Point(3, 9);
 
@@ -105,7 +106,9 @@
             this.btnFiltroArt.TabIndex = 3;
             this.btnFiltroArt.Text = "Buscar";
             this.btnFiltroArt.UseVisualStyleBackColor = true;
-            //this.btnFiltroArt.Click += new System.EventHandler(this.btnFiltroArt_Click);
+
+            this.btnFiltroArt.Click += new System.EventHandler(this.btnFiltroArt_Click);
+
             // 
             // btnFiltrarArt
             // 
@@ -132,17 +135,12 @@
             // txtBoxBuscarArt
             // 
 
-            //this.txtBoxBusArt.Location = new System.Drawing.Point(118, 98);
-            //this.txtBoxBusArt.Name = "txtBoxBusArt";
-            //this.txtBoxBusArt.Size = new System.Drawing.Size(205, 26);
-            //this.txtBoxBusArt.TabIndex = 6;
-
             this.txtBoxBuscarArt.Location = new System.Drawing.Point(80, 62);
             this.txtBoxBuscarArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBuscarArt.Name = "txtBoxBuscarArt";
             this.txtBoxBuscarArt.Size = new System.Drawing.Size(138, 20);
             this.txtBoxBuscarArt.TabIndex = 6;
-            //this.txtBoxBuscarArt.TextChanged += new System.EventHandler(this.txtBoxBuscarArt_TextChanged);
+            this.txtBoxBuscarArt.TextChanged += new System.EventHandler(this.txtBoxBuscarArt_TextChanged);
 
             // 
             // txtboxFiltrarArt
