@@ -19,6 +19,7 @@ namespace Actividad2PrograIII
         public SeccionMarca()
         {
             InitializeComponent();
+            Text = "Marcas";
         }
 
         private void SeccionMarca_Load(object sender, EventArgs e)
@@ -102,8 +103,6 @@ namespace Actividad2PrograIII
             {
                 ListaBusqueda = ListaMarcas;
             }
-
-
 
                 dgvMarcas.DataSource = null;
             dgvMarcas.DataSource = ListaBusqueda;

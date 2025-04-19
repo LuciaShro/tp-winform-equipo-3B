@@ -43,9 +43,8 @@
             this.pnlAgregarMarca.Controls.Add(this.lblAgregrMarca);
             this.pnlAgregarMarca.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAgregarMarca.Location = new System.Drawing.Point(0, 0);
-            this.pnlAgregarMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAgregarMarca.Name = "pnlAgregarMarca";
-            this.pnlAgregarMarca.Size = new System.Drawing.Size(473, 45);
+            this.pnlAgregarMarca.Size = new System.Drawing.Size(710, 69);
             this.pnlAgregarMarca.TabIndex = 1;
             // 
             // lblAgregrMarca
@@ -53,10 +52,9 @@
             this.lblAgregrMarca.AutoSize = true;
             this.lblAgregrMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregrMarca.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblAgregrMarca.Location = new System.Drawing.Point(14, 13);
-            this.lblAgregrMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAgregrMarca.Location = new System.Drawing.Point(21, 20);
             this.lblAgregrMarca.Name = "lblAgregrMarca";
-            this.lblAgregrMarca.Size = new System.Drawing.Size(113, 20);
+            this.lblAgregrMarca.Size = new System.Drawing.Size(165, 29);
             this.lblAgregrMarca.TabIndex = 1;
             this.lblAgregrMarca.Text = "Nueva Marca";
             // 
@@ -64,19 +62,17 @@
             // 
             this.lblDescripcionMarca.AutoSize = true;
             this.lblDescripcionMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionMarca.Location = new System.Drawing.Point(96, 126);
-            this.lblDescripcionMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcionMarca.Location = new System.Drawing.Point(133, 220);
             this.lblDescripcionMarca.Name = "lblDescripcionMarca";
-            this.lblDescripcionMarca.Size = new System.Drawing.Size(57, 17);
+            this.lblDescripcionMarca.Size = new System.Drawing.Size(79, 25);
             this.lblDescripcionMarca.TabIndex = 11;
             this.lblDescripcionMarca.Text = "Marca:";
             // 
             // txtDescripcionMarca
             // 
-            this.txtDescripcionMarca.Location = new System.Drawing.Point(169, 123);
-            this.txtDescripcionMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcionMarca.Location = new System.Drawing.Point(246, 221);
             this.txtDescripcionMarca.Name = "txtDescripcionMarca";
-            this.txtDescripcionMarca.Size = new System.Drawing.Size(210, 20);
+            this.txtDescripcionMarca.Size = new System.Drawing.Size(313, 26);
             this.txtDescripcionMarca.TabIndex = 15;
             // 
             // btnAceptarMarca
@@ -84,10 +80,9 @@
             this.btnAceptarMarca.BackColor = System.Drawing.SystemColors.Window;
             this.btnAceptarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarMarca.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAceptarMarca.Location = new System.Drawing.Point(117, 346);
-            this.btnAceptarMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptarMarca.Location = new System.Drawing.Point(213, 316);
             this.btnAceptarMarca.Name = "btnAceptarMarca";
-            this.btnAceptarMarca.Size = new System.Drawing.Size(70, 26);
+            this.btnAceptarMarca.Size = new System.Drawing.Size(105, 40);
             this.btnAceptarMarca.TabIndex = 19;
             this.btnAceptarMarca.Text = "Aceptar";
             this.btnAceptarMarca.UseVisualStyleBackColor = false;
@@ -98,10 +93,9 @@
             this.btnCancelarMarca.BackColor = System.Drawing.SystemColors.Window;
             this.btnCancelarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelarMarca.Location = new System.Drawing.Point(276, 345);
-            this.btnCancelarMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarMarca.Location = new System.Drawing.Point(403, 314);
             this.btnCancelarMarca.Name = "btnCancelarMarca";
-            this.btnCancelarMarca.Size = new System.Drawing.Size(68, 27);
+            this.btnCancelarMarca.Size = new System.Drawing.Size(102, 42);
             this.btnCancelarMarca.TabIndex = 20;
             this.btnCancelarMarca.Text = "Cancelar";
             this.btnCancelarMarca.UseVisualStyleBackColor = false;
@@ -109,16 +103,16 @@
             // 
             // SeccionAgregarMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 425);
+            this.ClientSize = new System.Drawing.Size(710, 654);
             this.Controls.Add(this.btnCancelarMarca);
             this.Controls.Add(this.btnAceptarMarca);
             this.Controls.Add(this.txtDescripcionMarca);
             this.Controls.Add(this.lblDescripcionMarca);
             this.Controls.Add(this.pnlAgregarMarca);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SeccionAgregarMarca";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionAgregarMarca";
             this.Load += new System.EventHandler(this.SeccionAgregarMarca_Load);
             this.pnlAgregarMarca.ResumeLayout(false);

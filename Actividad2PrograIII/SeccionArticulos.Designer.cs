@@ -66,8 +66,14 @@
             // 
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+            this.lblArticulos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            //this.lblArticulos.Location = new System.Drawing.Point(3, 9);
+
             this.lblArticulos.Location = new System.Drawing.Point(2, 6);
             this.lblArticulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
             this.lblArticulos.Name = "lblArticulos";
             this.lblArticulos.Size = new System.Drawing.Size(168, 48);
             this.lblArticulos.TabIndex = 1;
@@ -93,7 +99,9 @@
             this.btnFiltroArt.TabIndex = 3;
             this.btnFiltroArt.Text = "Buscar";
             this.btnFiltroArt.UseVisualStyleBackColor = true;
+
             this.btnFiltroArt.Click += new System.EventHandler(this.btnFiltroArt_Click);
+
             // 
             // btnLimpiarArt
             // 
@@ -109,12 +117,14 @@
             // 
             // txtBoxBuscarArt
             // 
+
             this.txtBoxBuscarArt.Location = new System.Drawing.Point(80, 62);
             this.txtBoxBuscarArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBuscarArt.Name = "txtBoxBuscarArt";
             this.txtBoxBuscarArt.Size = new System.Drawing.Size(138, 20);
             this.txtBoxBuscarArt.TabIndex = 6;
             this.txtBoxBuscarArt.TextChanged += new System.EventHandler(this.txtBoxBuscarArt_TextChanged);
+
             // 
             // btnAgregarArt
             // 

@@ -14,9 +14,11 @@ namespace Actividad2PrograIII
 {
     public partial class SeccionCategorias : Form
     {
+        private List<Categoria> ListaCategorias;
         public SeccionCategorias()
         {
             InitializeComponent();
+            Text = "Categorias";
         }
 
         private void SeccionCategorias_Load(object sender, EventArgs e)
@@ -39,8 +41,9 @@ namespace Actividad2PrograIII
         private void cargar()
         {
             GestionCategoria categoria = new GestionCategoria();
+            ListaCategorias = categoria.listarCategoria();
             dgvCategorias.DataSource = categoria.listarCategoria();
-            dgvCategorias.Columns["Id"].Visible = false;
+            dgvCategorias.Columns["Id"].Visible = true;
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)
@@ -75,6 +78,33 @@ namespace Actividad2PrograIII
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnFiltrarCategoria_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void txtboxFiltrarCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtboxFiltrarCategoria_TextChanged(object sender, EventArgs e)
+        {
+            List<Categoria> listaFiltrada;
+            string filtro = txtboxFiltrarCategoria.Text;
+
+            if (filtro != "")
+            {
+                listaFiltrada = ListaCategorias.FindAll(c => c.Nombre.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = ListaCategorias;
+            }
+
+
+            dgvCategorias.DataSource = null;
+            dgvCategorias.DataSource = listaFiltrada;
         }
     }
 }

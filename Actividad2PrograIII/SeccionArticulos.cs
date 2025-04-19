@@ -19,6 +19,7 @@ namespace Actividad2PrograIII
         public SeccionArticulos()
         {
             InitializeComponent();
+            Text = "Articulos";
         }
 
         private void SeccionArticulos_Load(object sender, EventArgs e)
