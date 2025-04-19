@@ -31,14 +31,22 @@ namespace Actividad2PrograIII
             GestionArticulos gestion = new GestionArticulos();
             listaArticulo = gestion.listar(); //DataSourse -> grilla de datos
             dgvArticulos.DataSource = listaArticulo;
-            dgvArticulos.Columns["Imagen"].Visible = false;
+            ocultarColumnas();
             cargarImagen(listaArticulo[0].Imagen.ImagenURL);
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["Imagen"].Visible = false;
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Imagen.ImagenURL);
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Imagen.ImagenURL);
+            }
         }
 
         private void cargarImagen (string imagen)
@@ -88,6 +96,28 @@ namespace Actividad2PrograIII
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        // continuar con filtrar 
+        private void btnFiltroArt_Click(object sender, EventArgs e)
+        {
+            List<Articulo> listaArtFiltrada;
+            string filtro = txtBoxBuscarArt.Text;
+
+            if(filtro != "")
+            {
+                listaArtFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaArtFiltrada = listaArticulo;
+            }
+
+
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaArtFiltrada;
+            ocultarColumnas();
         }
     }
 }
