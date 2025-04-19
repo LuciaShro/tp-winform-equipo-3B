@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
@@ -43,7 +44,6 @@ namespace Gestion
                    /* if (!(datos.Lector["Categoria"] is DBNull))
                         aux.Categoria.Nombre = (string)datos.Lector["Categoria"];*/
                     aux.Categoria.Nombre = datos.Lector["Categoria"] is DBNull ? "" : (string)datos.Lector["Categoria"];
-
 
                     if (!(datos.Lector["Precio"] is DBNull))
                         aux.Precio = (decimal)datos.Lector["Precio"];
@@ -119,6 +119,20 @@ namespace Gestion
             }
         }
 
+        public void EliminarArticulos(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from ARTICULOS where id = @id;");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

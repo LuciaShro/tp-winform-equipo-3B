@@ -26,8 +26,9 @@ namespace Dominio
         }
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
 
-        public override string ToString() {
-            return Nombre;
+        public override string ToString() 
+        {
+            return _nombre;
         }
     }
 

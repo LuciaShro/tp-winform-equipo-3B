@@ -11,11 +11,6 @@ namespace Gestion
     public class GestionCategoria
     {
 
-        //Eliminar Categoria
-        //public bool EliminarCategoria(int IdCategoria) 
-        //{ 
-        //}
-
         //Buscar Categoria
         //public Categoria BuscarCategoria(int IdCategoria)
         //{
@@ -108,6 +103,26 @@ namespace Gestion
                 datos.cerrarConexion();
             }
         }
+
+        // Eliminar categoria
+
+        public void eliminarCategoria(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from CATEGORIAS where Id=@id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
     }
 }

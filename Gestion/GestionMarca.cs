@@ -11,12 +11,26 @@ namespace Gestion
     public class GestionMarca
     {
 
+        public void ModificarMarca(Marca marca)
+        {
+            AccesoDatos datos = new AccesoDatos();
 
-
-        //Modificar marca
-        //public bool ModificarMarca(Marca marca)
-        //{
-        //}
+            try
+            {
+                datos.setearConsulta("update MARCAS set Descripcion = @Descripcion where Id = @Id");
+                datos.setearParametro("@Descripcion", marca.Nombre);
+                datos.setearParametro("@Id", marca.Id);
+                datos.ejecutarAccion();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
         //Buscar marca
         //public Marca BuscarMarca(int IdMarca)

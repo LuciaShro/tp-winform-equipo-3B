@@ -40,7 +40,7 @@
             this.btnLimpiarCategoria = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnEditarCategoria = new System.Windows.Forms.Button();
-            this.btnEliminarCategoria = new System.Windows.Forms.Button();
+            this.btnEliminarCategoriaFisico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -174,17 +174,18 @@
             this.btnEditarCategoria.UseVisualStyleBackColor = true;
             this.btnEditarCategoria.Click += new System.EventHandler(this.btnEditarCategoria_Click);
             // 
-            // btnEliminarCategoria
+            // btnEliminarCategoriaFisico
             // 
-            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(358, 383);
-            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(144, 32);
-            this.btnEliminarCategoria.TabIndex = 13;
-            this.btnEliminarCategoria.Text = "Eliminar";
-            this.btnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.btnEliminarCategoriaFisico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCategoriaFisico.ForeColor = System.Drawing.Color.CadetBlue;
+            this.btnEliminarCategoriaFisico.Location = new System.Drawing.Point(358, 383);
+            this.btnEliminarCategoriaFisico.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarCategoriaFisico.Name = "btnEliminarCategoriaFisico";
+            this.btnEliminarCategoriaFisico.Size = new System.Drawing.Size(144, 32);
+            this.btnEliminarCategoriaFisico.TabIndex = 13;
+            this.btnEliminarCategoriaFisico.Text = "Eliminar";
+            this.btnEliminarCategoriaFisico.UseVisualStyleBackColor = true;
+            this.btnEliminarCategoriaFisico.Click += new System.EventHandler(this.btnEliminarCategoriaFisico_Click);
             // 
             // SeccionCategorias
             // 
@@ -192,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnEliminarCategoria);
+            this.Controls.Add(this.btnEliminarCategoriaFisico);
             this.Controls.Add(this.btnEditarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.btnLimpiarCategoria);
@@ -230,6 +231,6 @@
         private System.Windows.Forms.Button btnLimpiarCategoria;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Button btnEditarCategoria;
-        private System.Windows.Forms.Button btnEliminarCategoria;
+        private System.Windows.Forms.Button btnEliminarCategoriaFisico;
     }
 }

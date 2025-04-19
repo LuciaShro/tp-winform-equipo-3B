@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Actividad2PrograIII
 {
     public partial class SeccionMarca : Form
     {
+
         public SeccionMarca()
         {
             InitializeComponent();
@@ -22,7 +24,6 @@ namespace Actividad2PrograIII
         private void SeccionMarca_Load(object sender, EventArgs e)
         {
             cargar();
-
         }
 
         private void cargar ()
@@ -32,6 +33,7 @@ namespace Actividad2PrograIII
             try
             {
                 dgvMarcas.DataSource = marca.listarMarca();
+
             }
             catch (Exception ex)
             {
@@ -48,26 +50,40 @@ namespace Actividad2PrograIII
             cargar();
         }
 
+
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
-            GestionMarca gestionMarca= new GestionMarca();  
+            GestionMarca gestionMarca = new GestionMarca();
             Marca seleccionado = new Marca();
             try
             {
-                DialogResult respuesta= MessageBox.Show("Seguro quiere eliminar el dato?","Eliminado",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("Seguro quiere eliminar el dato?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if (respuesta == DialogResult.Yes) {
+                if (respuesta == DialogResult.Yes)
+                {
                     seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
                     gestionMarca.EliminarMarca(seleccionado.Id);
                     cargar();
                 }
 
-                
+
 
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnEditarMarca_Click(object sender, EventArgs e)
+        {
+            Marca seleccionado;
+            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+            
+            SeccionAgregarMarca modificar = new SeccionAgregarMarca(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+
         }
     }
 }
