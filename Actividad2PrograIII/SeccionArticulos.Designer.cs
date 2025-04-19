@@ -131,6 +131,7 @@
             this.txtBoxBuscarArt.Name = "txtBoxBuscarArt";
             this.txtBoxBuscarArt.Size = new System.Drawing.Size(138, 20);
             this.txtBoxBuscarArt.TabIndex = 6;
+            this.txtBoxBuscarArt.TextChanged += new System.EventHandler(this.txtBoxBuscarArt_TextChanged);
             // 
             // txtboxFiltrarArt
             // 

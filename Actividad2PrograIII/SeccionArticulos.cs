@@ -101,10 +101,15 @@ namespace Actividad2PrograIII
         // continuar con filtrar 
         private void btnFiltroArt_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtBoxBuscarArt_TextChanged(object sender, EventArgs e)
+        {
             List<Articulo> listaArtFiltrada;
             string filtro = txtBoxBuscarArt.Text;
 
-            if(filtro != "")
+            if (filtro!= "")
             {
                 listaArtFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
             }
