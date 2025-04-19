@@ -18,11 +18,6 @@ namespace Gestion
         //{
         //}
 
-        //Eliminar marca
-        //public bool EliminarMarca(int IdMarca) 
-        //{ 
-        //}
-
         //Buscar marca
         //public Marca BuscarMarca(int IdMarca)
         //{
@@ -89,6 +84,20 @@ namespace Gestion
                 datos.cerrarConexion();
             }
         
+        }
+
+        public void EliminarMarca(int Id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from MARCAS where Id=@Id");
+                datos.setearParametro("@Id", Id);
+                datos.ejecutarLectura();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
         }
     }
 }

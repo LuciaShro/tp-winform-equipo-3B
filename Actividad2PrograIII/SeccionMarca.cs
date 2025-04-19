@@ -1,4 +1,5 @@
-﻿using Gestion;
+﻿using Dominio;
+using Gestion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,28 @@ namespace Actividad2PrograIII
             SeccionAgregarMarca agregar = new SeccionAgregarMarca();
             agregar.ShowDialog();
             cargar();
+        }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            GestionMarca gestionMarca= new GestionMarca();  
+            Marca seleccionado = new Marca();
+            try
+            {
+                DialogResult respuesta= MessageBox.Show("Seguro quiere eliminar el dato?","Eliminado",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes) {
+                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    gestionMarca.EliminarMarca(seleccionado.Id);
+                    cargar();
+                }
+
+                
+
+            }
+            catch (Exception ex) { 
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

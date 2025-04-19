@@ -201,6 +201,7 @@
             this.btnEliminarMarca.TabIndex = 22;
             this.btnEliminarMarca.Text = "Eliminar";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // SeccionMarca
             // 
