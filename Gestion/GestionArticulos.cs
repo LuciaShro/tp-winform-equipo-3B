@@ -73,11 +73,9 @@ namespace Gestion
 
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values('" + articulo.codArticulo + "', '" + articulo.Nombre + "', '" + articulo.Descripcion + "', " + articulo.Marca.Id + ", " + articulo.Categoria.Id + ", " + articulo.Precio + ")");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " + "VALUES ('" + articulo.codArticulo + "', '" + articulo.Nombre + "', '" + articulo.Descripcion + "', " +
+                articulo.Marca.Id + ", " + articulo.Categoria.Id + ", " + articulo.Precio + "); " + "INSERT INTO IMAGENES (IdArticulo, ImagenUrl) " + "VALUES (SCOPE_IDENTITY(), '" + articulo.Imagen.ImagenURL + "')");
                 datos.ejecutarAccion();
-                //datos.setearConsulta("UPDATE IMAGENES set ImagenUrl = @ImagenUrl WHERE Id = @Id");
-                //datos.setearParametro("@ImagenUrl", articulo.Imagen.ImagenURL);
-                //datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
@@ -95,7 +93,7 @@ namespace Gestion
 
             try
             {
-                datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo, Nombre= @Nombre, Descripcion = @Descripcion, Precio = @Precio, IdMarca = @IdMarca, IdCategoria = @IdCategoria where Id = @Id");
+                datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo, Nombre= @Nombre, Descripcion = @Descripcion, Precio = @Precio, IdMarca = @IdMarca, IdCategoria = @IdCategoria where Id = @Id;" + "UPDATE IMAGENES set ImagenUrl = @ImagenUrl WHERE IdArticulo = @Id");
                 datos.setearParametro("@Codigo", articulo.codArticulo);
                 datos.setearParametro("@Nombre", articulo.Nombre);
                 datos.setearParametro("@Descripcion", articulo.Descripcion);
@@ -103,11 +101,8 @@ namespace Gestion
                 datos.setearParametro("@IdMarca", articulo.Marca.Id);
                 datos.setearParametro("@IdCategoria", articulo.Categoria.Id);
                 datos.setearParametro("@Id", articulo.IDArticulo);
+                datos.setearParametro("@ImagenUrl", articulo.Imagen.ImagenURL);
                 datos.ejecutarAccion();
-
-                //datos.setearConsulta("UPDATE IMAGENES set ImagenUrl = @ImagenUrl WHERE Id = @Id");
-                //datos.setearParametro("@ImagenUrl", articulo.Imagen.ImagenURL);
-                //datos.ejecutarAccion();
             }
             catch (Exception ex)
             {

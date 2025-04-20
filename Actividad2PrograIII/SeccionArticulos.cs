@@ -193,6 +193,14 @@ namespace Actividad2PrograIII
             return false;
         }
 
+        private void btnLimpiarArt_Click(object sender, EventArgs e)
+        {
+            GestionArticulos gestion = new GestionArticulos();
+
+            dgvArticulos.DataSource = gestion.Filtrar("", "", "");
+
+        }
+
         //private void MostrarDetalleArticulo()
         //{
         //    Articulo seleccionado;
