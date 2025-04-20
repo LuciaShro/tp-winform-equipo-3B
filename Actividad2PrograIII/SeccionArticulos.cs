@@ -74,11 +74,20 @@ namespace Actividad2PrograIII
 
         private void btnEditarArt_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            SeccionAgregarArtcs editar = new SeccionAgregarArtcs(seleccionado);
-            editar.ShowDialog();
-            Cargar();
+
+            Articulo seleccionado; 
+            if (dgvArticulos.CurrentRow != null)
+            {
+                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                SeccionAgregarArtcs editar = new SeccionAgregarArtcs(seleccionado);
+                editar.ShowDialog();
+                Cargar();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un articulo para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void btnEliminarArt_Click(object sender, EventArgs e)
@@ -147,6 +156,8 @@ namespace Actividad2PrograIII
 
             try
             {
+                if (validaciones())
+                    return;
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFlitro.Text;
@@ -168,6 +179,17 @@ namespace Actividad2PrograIII
             SeccionDetalleArt detalle = new SeccionDetalleArt(seleccionado);
             detalle.ShowDialog();
             
+        }
+
+        private bool validaciones()
+        {
+            if (cboCampo.SelectedItem == null || cboCriterio.SelectedItem == null || string.IsNullOrEmpty(txtFlitro.Text))
+            {
+                MessageBox.Show("Hay campos vacios");
+                return true;
+            }
+
+            return false;
         }
 
         //private void MostrarDetalleArticulo()
