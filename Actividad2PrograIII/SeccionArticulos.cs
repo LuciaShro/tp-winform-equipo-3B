@@ -152,7 +152,7 @@ namespace Actividad2PrograIII
 
                 cboCriterio.Items.Clear();
                 cboCriterio.Items.Add("Comienza con");
-                cboCriterio.Items.Add("Termina con con");
+                cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
  
         }
@@ -231,7 +231,10 @@ namespace Actividad2PrograIII
         {
             GestionArticulos gestion = new GestionArticulos();
 
-            dgvArticulos.DataSource = gestion.Filtrar("", "", "");
+            dgvArticulos.DataSource = gestion.Filtrar("", "", " ");
+            txtFlitro.Text = "";
+            txtBoxBuscarArt.Text = "";
+            Cargar();
 
         }
 

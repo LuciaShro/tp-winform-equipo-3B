@@ -154,7 +154,7 @@ namespace Gestion
                             break;
                     }
                 }
-                else if (campo == "Descripcion")
+                else if (campo == "Marca")
                 {
                     switch (criterio)
                     {
@@ -171,6 +171,7 @@ namespace Gestion
                 }
                 else
                 {
+               
                     switch (criterio)
                     {
                         case "Comienza con":
@@ -184,6 +185,7 @@ namespace Gestion
                             break;
 
                     }
+                    
                 }
                 
                 datos.setearConsulta(consulta);
