@@ -36,6 +36,7 @@
             this.btnArticulos = new System.Windows.Forms.Button();
             this.lblText1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelInicio = new System.Windows.Forms.Panel();
             this.panelLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -113,12 +114,21 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // panelInicio
+            // 
+            this.panelInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInicio.Location = new System.Drawing.Point(207, 0);
+            this.panelInicio.Name = "panelInicio";
+            this.panelInicio.Size = new System.Drawing.Size(1182, 703);
+            this.panelInicio.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1389, 703);
+            this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.panelLateral);
             this.Controls.Add(this.label1);
             this.IsMdiContainer = true;
@@ -143,6 +153,7 @@
         private System.Windows.Forms.Button btnCategorias;
         private System.Windows.Forms.Button btnMarcas;
         private System.Windows.Forms.Button btnArticulos;
+        private System.Windows.Forms.Panel panelInicio;
     }
 }
 

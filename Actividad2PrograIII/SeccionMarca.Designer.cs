@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelMarcas = new System.Windows.Forms.Panel();
-            this.lblMarcas = new System.Windows.Forms.Label();
             this.lblBuscarMarca = new System.Windows.Forms.Label();
             this.txtBoxBusMarca = new System.Windows.Forms.TextBox();
             this.btnBuscarMarca = new System.Windows.Forms.Button();
@@ -37,6 +36,7 @@
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
+            this.lblMarcas = new System.Windows.Forms.Label();
             this.panelMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
@@ -50,18 +50,6 @@
             this.panelMarcas.Name = "panelMarcas";
             this.panelMarcas.Size = new System.Drawing.Size(1200, 74);
             this.panelMarcas.TabIndex = 1;
-            // 
-            // lblMarcas
-            // 
-            this.lblMarcas.AutoSize = true;
-            this.lblMarcas.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMarcas.Location = new System.Drawing.Point(4, 28);
-            this.lblMarcas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(197, 71);
-            this.lblMarcas.TabIndex = 1;
-            this.lblMarcas.Text = "MARCAS";
             // 
             // lblBuscarMarca
             // 
@@ -94,7 +82,7 @@
             // 
             // dgvMarcas
             // 
-            this.dgvMarcas.BackgroundColor = System.Drawing.Color.Ivory;
+            this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMarcas.Location = new System.Drawing.Point(106, 181);
@@ -146,6 +134,17 @@
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
+            // lblMarcas
+            // 
+            this.lblMarcas.AutoSize = true;
+            this.lblMarcas.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarcas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMarcas.Location = new System.Drawing.Point(4, 9);
+            this.lblMarcas.Name = "lblMarcas";
+            this.lblMarcas.Size = new System.Drawing.Size(197, 71);
+            this.lblMarcas.TabIndex = 2;
+            this.lblMarcas.Text = "MARCAS";
+            // 
             // SeccionMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -176,7 +175,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMarcas;
-        private System.Windows.Forms.Label lblMarcas;
         private System.Windows.Forms.Label lblBuscarMarca;
         private System.Windows.Forms.TextBox txtBoxBusMarca;
         private System.Windows.Forms.Button btnBuscarMarca;
@@ -184,5 +182,6 @@
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Button btnEditarMarca;
         private System.Windows.Forms.Button btnEliminarMarca;
+        private System.Windows.Forms.Label lblMarcas;
     }
 }

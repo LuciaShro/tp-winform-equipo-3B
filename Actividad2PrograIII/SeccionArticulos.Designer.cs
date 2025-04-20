@@ -58,9 +58,8 @@
             this.panelArticulos.Controls.Add(this.lblArticulos);
             this.panelArticulos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelArticulos.Location = new System.Drawing.Point(0, 0);
-            this.panelArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.panelArticulos.Name = "panelArticulos";
-            this.panelArticulos.Size = new System.Drawing.Size(771, 48);
+            this.panelArticulos.Size = new System.Drawing.Size(1190, 74);
             this.panelArticulos.TabIndex = 0;
             // 
             // lblArticulos
@@ -68,32 +67,27 @@
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArticulos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblArticulos.Location = new System.Drawing.Point(2, 6);
-            this.lblArticulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArticulos.Location = new System.Drawing.Point(3, 9);
             this.lblArticulos.Name = "lblArticulos";
-            this.lblArticulos.Size = new System.Drawing.Size(168, 48);
+            this.lblArticulos.Size = new System.Drawing.Size(246, 71);
             this.lblArticulos.TabIndex = 1;
             this.lblArticulos.Text = "ARTICULOS";
             // 
             // lblBuscarArt
             // 
-            this.lblBuscarArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBuscarArt.AutoSize = true;
             this.lblBuscarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarArt.Location = new System.Drawing.Point(8, 62);
-            this.lblBuscarArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuscarArt.Location = new System.Drawing.Point(22, 95);
             this.lblBuscarArt.Name = "lblBuscarArt";
-            this.lblBuscarArt.Size = new System.Drawing.Size(70, 20);
+            this.lblBuscarArt.Size = new System.Drawing.Size(100, 29);
             this.lblBuscarArt.TabIndex = 1;
             this.lblBuscarArt.Text = "Buscar:";
             // 
             // btnFiltroArt
             // 
-            this.btnFiltroArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFiltroArt.Location = new System.Drawing.Point(222, 58);
-            this.btnFiltroArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltroArt.Location = new System.Drawing.Point(343, 89);
             this.btnFiltroArt.Name = "btnFiltroArt";
-            this.btnFiltroArt.Size = new System.Drawing.Size(69, 27);
+            this.btnFiltroArt.Size = new System.Drawing.Size(104, 42);
             this.btnFiltroArt.TabIndex = 3;
             this.btnFiltroArt.Text = "Buscar";
             this.btnFiltroArt.UseVisualStyleBackColor = true;
@@ -101,14 +95,12 @@
             // 
             // btnLimpiarArt
             // 
-            this.btnLimpiarArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLimpiarArt.BackColor = System.Drawing.Color.CadetBlue;
             this.btnLimpiarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarArt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLimpiarArt.Location = new System.Drawing.Point(662, 55);
-            this.btnLimpiarArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiarArt.Location = new System.Drawing.Point(1003, 85);
             this.btnLimpiarArt.Name = "btnLimpiarArt";
-            this.btnLimpiarArt.Size = new System.Drawing.Size(79, 31);
+            this.btnLimpiarArt.Size = new System.Drawing.Size(118, 48);
             this.btnLimpiarArt.TabIndex = 5;
             this.btnLimpiarArt.Text = "Limpiar";
             this.btnLimpiarArt.UseVisualStyleBackColor = false;
@@ -116,11 +108,9 @@
             // 
             // txtBoxBuscarArt
             // 
-            this.txtBoxBuscarArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBoxBuscarArt.Location = new System.Drawing.Point(80, 62);
-            this.txtBoxBuscarArt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoxBuscarArt.Location = new System.Drawing.Point(130, 95);
             this.txtBoxBuscarArt.Name = "txtBoxBuscarArt";
-            this.txtBoxBuscarArt.Size = new System.Drawing.Size(138, 20);
+            this.txtBoxBuscarArt.Size = new System.Drawing.Size(205, 26);
             this.txtBoxBuscarArt.TabIndex = 6;
             this.txtBoxBuscarArt.TextChanged += new System.EventHandler(this.txtBoxBuscarArt_TextChanged);
             // 
@@ -129,10 +119,9 @@
             this.btnAgregarArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarArt.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnAgregarArt.Location = new System.Drawing.Point(26, 401);
-            this.btnAgregarArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarArt.Location = new System.Drawing.Point(33, 653);
             this.btnAgregarArt.Name = "btnAgregarArt";
-            this.btnAgregarArt.Size = new System.Drawing.Size(144, 32);
+            this.btnAgregarArt.Size = new System.Drawing.Size(216, 49);
             this.btnAgregarArt.TabIndex = 9;
             this.btnAgregarArt.Text = "Agregar";
             this.btnAgregarArt.UseVisualStyleBackColor = true;
@@ -143,10 +132,9 @@
             this.btnEditarArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarArt.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEditarArt.Location = new System.Drawing.Point(204, 401);
-            this.btnEditarArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarArt.Location = new System.Drawing.Point(294, 653);
             this.btnEditarArt.Name = "btnEditarArt";
-            this.btnEditarArt.Size = new System.Drawing.Size(144, 32);
+            this.btnEditarArt.Size = new System.Drawing.Size(216, 49);
             this.btnEditarArt.TabIndex = 10;
             this.btnEditarArt.Text = "Editar";
             this.btnEditarArt.UseVisualStyleBackColor = true;
@@ -157,10 +145,9 @@
             this.btnEliminarArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarArt.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEliminarArt.Location = new System.Drawing.Point(371, 401);
-            this.btnEliminarArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarArt.Location = new System.Drawing.Point(541, 653);
             this.btnEliminarArt.Name = "btnEliminarArt";
-            this.btnEliminarArt.Size = new System.Drawing.Size(144, 32);
+            this.btnEliminarArt.Size = new System.Drawing.Size(216, 49);
             this.btnEliminarArt.TabIndex = 11;
             this.btnEliminarArt.Text = "Eliminar";
             this.btnEliminarArt.UseVisualStyleBackColor = true;
@@ -169,11 +156,10 @@
             // pictureBoxArt
             // 
             this.pictureBoxArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxArt.BackColor = System.Drawing.Color.Ivory;
-            this.pictureBoxArt.Location = new System.Drawing.Point(544, 169);
-            this.pictureBoxArt.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxArt.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBoxArt.Location = new System.Drawing.Point(850, 271);
             this.pictureBoxArt.Name = "pictureBoxArt";
-            this.pictureBoxArt.Size = new System.Drawing.Size(216, 216);
+            this.pictureBoxArt.Size = new System.Drawing.Size(328, 340);
             this.pictureBoxArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxArt.TabIndex = 12;
             this.pictureBoxArt.TabStop = false;
@@ -183,88 +169,87 @@
             this.dgvArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvArticulos.BackgroundColor = System.Drawing.Color.Ivory;
+            this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulos.Location = new System.Drawing.Point(10, 176);
-            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvArticulos.Location = new System.Drawing.Point(15, 271);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 62;
             this.dgvArticulos.RowTemplate.Height = 28;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(505, 209);
+            this.dgvArticulos.Size = new System.Drawing.Size(794, 340);
             this.dgvArticulos.TabIndex = 13;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // lblCampo
             // 
-            this.lblCampo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCampo.AutoSize = true;
             this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCampo.Location = new System.Drawing.Point(6, 111);
+            this.lblCampo.Location = new System.Drawing.Point(19, 171);
+            this.lblCampo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(70, 20);
+            this.lblCampo.Size = new System.Drawing.Size(103, 29);
             this.lblCampo.TabIndex = 14;
             this.lblCampo.Text = "Campo:";
             // 
             // lblCriterio
             // 
-            this.lblCriterio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCriterio.AutoSize = true;
             this.lblCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCriterio.Location = new System.Drawing.Point(224, 111);
+            this.lblCriterio.Location = new System.Drawing.Point(346, 171);
+            this.lblCriterio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(72, 20);
+            this.lblCriterio.Size = new System.Drawing.Size(107, 29);
             this.lblCriterio.TabIndex = 15;
             this.lblCriterio.Text = "Criterio:";
             // 
             // lblFiltro
             // 
-            this.lblFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFiltro.Location = new System.Drawing.Point(444, 111);
+            this.lblFiltro.Location = new System.Drawing.Point(676, 171);
+            this.lblFiltro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(55, 20);
+            this.lblFiltro.Size = new System.Drawing.Size(81, 29);
             this.lblFiltro.TabIndex = 16;
             this.lblFiltro.Text = "Filtro:";
             // 
             // cboCampo
             // 
-            this.cboCampo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
-            this.cboCampo.Location = new System.Drawing.Point(80, 110);
+            this.cboCampo.Location = new System.Drawing.Point(130, 169);
+            this.cboCampo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCampo.Name = "cboCampo";
-            this.cboCampo.Size = new System.Drawing.Size(138, 21);
+            this.cboCampo.Size = new System.Drawing.Size(205, 28);
             this.cboCampo.TabIndex = 17;
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
             // cboCriterio
             // 
-            this.cboCriterio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Location = new System.Drawing.Point(302, 110);
+            this.cboCriterio.Location = new System.Drawing.Point(463, 169);
+            this.cboCriterio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCriterio.Name = "cboCriterio";
-            this.cboCriterio.Size = new System.Drawing.Size(138, 21);
+            this.cboCriterio.Size = new System.Drawing.Size(205, 28);
             this.cboCriterio.TabIndex = 18;
             // 
             // txtFlitro
             // 
-            this.txtFlitro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFlitro.Location = new System.Drawing.Point(505, 111);
+            this.txtFlitro.Location = new System.Drawing.Point(768, 171);
+            this.txtFlitro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFlitro.Name = "txtFlitro";
-            this.txtFlitro.Size = new System.Drawing.Size(138, 20);
+            this.txtFlitro.Size = new System.Drawing.Size(205, 26);
             this.txtFlitro.TabIndex = 19;
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFiltrar.Location = new System.Drawing.Point(649, 110);
+            this.btnFiltrar.Location = new System.Drawing.Point(984, 169);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(92, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(138, 35);
             this.btnFiltrar.TabIndex = 20;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -272,13 +257,12 @@
             // 
             // btnDetalleArt
             // 
-            this.btnDetalleArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDetalleArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDetalleArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalleArt.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnDetalleArt.Location = new System.Drawing.Point(580, 401);
-            this.btnDetalleArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDetalleArt.Location = new System.Drawing.Point(884, 633);
             this.btnDetalleArt.Name = "btnDetalleArt";
-            this.btnDetalleArt.Size = new System.Drawing.Size(168, 32);
+            this.btnDetalleArt.Size = new System.Drawing.Size(252, 49);
             this.btnDetalleArt.TabIndex = 21;
             this.btnDetalleArt.Text = "Detalle del Articulo";
             this.btnDetalleArt.UseVisualStyleBackColor = true;
@@ -286,9 +270,9 @@
             // 
             // SeccionArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 509);
+            this.ClientSize = new System.Drawing.Size(1190, 783);
             this.Controls.Add(this.btnDetalleArt);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.txtFlitro);
@@ -307,7 +291,6 @@
             this.Controls.Add(this.btnFiltroArt);
             this.Controls.Add(this.lblBuscarArt);
             this.Controls.Add(this.panelArticulos);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SeccionArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionArticulos";

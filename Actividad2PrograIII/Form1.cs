@@ -21,6 +21,7 @@ namespace Actividad2PrograIII
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
+            AbrirFormulario(new SeccionArticulos());
 
             foreach (var item in Application.OpenForms)
             {
@@ -35,6 +36,7 @@ namespace Actividad2PrograIII
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
+            AbrirFormulario(new SeccionCategorias());
 
             foreach (var item in Application.OpenForms)
             {
@@ -49,6 +51,7 @@ namespace Actividad2PrograIII
 
         private void btnMarcas_Click(object sender, EventArgs e)
         {
+            AbrirFormulario(new SeccionMarca());
 
             foreach (var item in Application.OpenForms)
             {
@@ -59,6 +62,22 @@ namespace Actividad2PrograIII
             SeccionMarca ventana = new SeccionMarca();
             ventana.MdiParent = this;
             ventana.Show();
+        }
+
+        private void AbrirFormulario(Form formularioHijo)
+        {
+            if (panelInicio.Controls.Count > 0)
+               panelInicio.Controls.RemoveAt(0);
+
+            formularioHijo.TopLevel = false; 
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+
+            panelInicio.Controls.Add(formularioHijo);
+            panelInicio.Tag = formularioHijo;
+
+            formularioHijo.Show();
+
         }
     }
 }

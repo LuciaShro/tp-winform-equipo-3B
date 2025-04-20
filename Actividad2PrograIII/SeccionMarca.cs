@@ -149,5 +149,10 @@ namespace Actividad2PrograIII
             dgvMarcas.DataSource = null;
             dgvMarcas.DataSource = ListaBusqueda;
         }
+
+        private void lblMarcas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

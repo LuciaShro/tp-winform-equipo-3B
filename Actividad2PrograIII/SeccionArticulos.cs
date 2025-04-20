@@ -36,6 +36,7 @@ namespace Actividad2PrograIII
             listaArticulo = gestion.listar(); //DataSourse -> grilla de datos
             dgvArticulos.DataSource = listaArticulo;
             ocultarColumnas();
+            dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "C2";
             cargarImagen(listaArticulo[0].Imagen.ImagenURL);
         }
 

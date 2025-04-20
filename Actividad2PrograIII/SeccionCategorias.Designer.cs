@@ -43,7 +43,7 @@
             // 
             // dgvCategorias
             // 
-            this.dgvCategorias.BackgroundColor = System.Drawing.Color.Ivory;
+            this.dgvCategorias.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvCategorias.Location = new System.Drawing.Point(169, 212);
