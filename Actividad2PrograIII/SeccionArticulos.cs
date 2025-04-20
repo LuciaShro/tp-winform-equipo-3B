@@ -96,14 +96,21 @@ namespace Actividad2PrograIII
             Articulo seleccionado;
             try
             {
-                DialogResult respuesta = MessageBox.Show("¿Estas seguro que deseas eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta == DialogResult.Yes)
+                if(dgvArticulos.CurrentRow != null)
                 {
-                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    GestionArt.EliminarArticulos(seleccionado.IDArticulo);
-                    Cargar();
+                    DialogResult respuesta = MessageBox.Show("¿Estas seguro que deseas eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                        GestionArt.EliminarArticulos(seleccionado.IDArticulo);
+                        Cargar();
+                    }
+
                 }
-                
+                else
+                {
+                    MessageBox.Show("Selecciona un articulo para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
@@ -183,11 +190,30 @@ namespace Actividad2PrograIII
 
         private bool validaciones()
         {
-            if (cboCampo.SelectedItem == null || cboCriterio.SelectedItem == null || string.IsNullOrEmpty(txtFlitro.Text))
+            if (cboCampo.SelectedItem == null && cboCriterio.SelectedItem == null && string.IsNullOrEmpty(txtFlitro.Text))
             {
-                MessageBox.Show("Hay campos vacios");
+                MessageBox.Show("Los campos se encuentran vacios para filtrar. Completalos para continuar.");
                 return true;
             }
+
+            if(cboCampo.SelectedItem == null)
+            {
+                MessageBox.Show("Campo se encuentra vacio. Completa para continuar");
+                return true;
+            }
+
+            if(cboCriterio.SelectedItem == null)
+            {
+                MessageBox.Show("Criterio se encuentra vacio. Completa para continuar");
+                return true;
+            }
+
+            if (string.IsNullOrEmpty(txtFlitro.Text))
+            {
+                MessageBox.Show("Completa el filtro para continuar");
+                return true;
+            }
+
 
             return false;
         }
