@@ -47,6 +47,7 @@
             this.btnCancelarArt = new System.Windows.Forms.Button();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.txtMarcaArt = new System.Windows.Forms.ComboBox();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.pnlAgregarArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboAgregar)).BeginInit();
             this.SuspendLayout();
@@ -57,9 +58,9 @@
             this.pnlAgregarArt.Controls.Add(this.lblAgregrArt1);
             this.pnlAgregarArt.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAgregarArt.Location = new System.Drawing.Point(0, 0);
-            this.pnlAgregarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAgregarArt.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAgregarArt.Name = "pnlAgregarArt";
-            this.pnlAgregarArt.Size = new System.Drawing.Size(812, 45);
+            this.pnlAgregarArt.Size = new System.Drawing.Size(857, 45);
             this.pnlAgregarArt.TabIndex = 0;
             // 
             // lblAgregrArt1
@@ -154,7 +155,7 @@
             // txbCodigoArt
             // 
             this.txbCodigoArt.Location = new System.Drawing.Point(11, 88);
-            this.txbCodigoArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbCodigoArt.Margin = new System.Windows.Forms.Padding(2);
             this.txbCodigoArt.Name = "txbCodigoArt";
             this.txbCodigoArt.Size = new System.Drawing.Size(210, 20);
             this.txbCodigoArt.TabIndex = 0;
@@ -162,7 +163,7 @@
             // txbNombreARt
             // 
             this.txbNombreARt.Location = new System.Drawing.Point(11, 153);
-            this.txbNombreARt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbNombreARt.Margin = new System.Windows.Forms.Padding(2);
             this.txbNombreARt.Name = "txbNombreARt";
             this.txbNombreARt.Size = new System.Drawing.Size(210, 20);
             this.txbNombreARt.TabIndex = 1;
@@ -170,7 +171,7 @@
             // txbPrecioArt
             // 
             this.txbPrecioArt.Location = new System.Drawing.Point(8, 273);
-            this.txbPrecioArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbPrecioArt.Margin = new System.Windows.Forms.Padding(2);
             this.txbPrecioArt.Name = "txbPrecioArt";
             this.txbPrecioArt.Size = new System.Drawing.Size(210, 20);
             this.txbPrecioArt.TabIndex = 3;
@@ -178,7 +179,7 @@
             // txbImgArt
             // 
             this.txbImgArt.Location = new System.Drawing.Point(292, 214);
-            this.txbImgArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbImgArt.Margin = new System.Windows.Forms.Padding(2);
             this.txbImgArt.Name = "txbImgArt";
             this.txbImgArt.Size = new System.Drawing.Size(209, 20);
             this.txbImgArt.TabIndex = 6;
@@ -187,15 +188,15 @@
             // txbDescArt
             // 
             this.txbDescArt.Location = new System.Drawing.Point(8, 214);
-            this.txbDescArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDescArt.Margin = new System.Windows.Forms.Padding(2);
             this.txbDescArt.Name = "txbDescArt";
             this.txbDescArt.Size = new System.Drawing.Size(210, 20);
             this.txbDescArt.TabIndex = 2;
             // 
             // pboAgregar
             // 
-            this.pboAgregar.Location = new System.Drawing.Point(526, 63);
-            this.pboAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboAgregar.Location = new System.Drawing.Point(583, 63);
+            this.pboAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.pboAgregar.Name = "pboAgregar";
             this.pboAgregar.Size = new System.Drawing.Size(263, 276);
             this.pboAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +209,7 @@
             this.btnAceptarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarArt.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnAceptarArt.Location = new System.Drawing.Point(301, 257);
-            this.btnAceptarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptarArt.Name = "btnAceptarArt";
             this.btnAceptarArt.Size = new System.Drawing.Size(70, 26);
             this.btnAceptarArt.TabIndex = 7;
@@ -222,7 +223,7 @@
             this.btnCancelarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarArt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancelarArt.Location = new System.Drawing.Point(409, 257);
-            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarArt.Name = "btnCancelarArt";
             this.btnCancelarArt.Size = new System.Drawing.Size(68, 27);
             this.btnCancelarArt.TabIndex = 8;
@@ -248,11 +249,23 @@
             this.txtMarcaArt.Size = new System.Drawing.Size(209, 21);
             this.txtMarcaArt.TabIndex = 4;
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAgregarImagen.Location = new System.Drawing.Point(506, 212);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(32, 23);
+            this.btnAgregarImagen.TabIndex = 18;
+            this.btnAgregarImagen.Text = "+";
+            this.btnAgregarImagen.UseVisualStyleBackColor = false;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // SeccionAgregarArtcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 352);
+            this.ClientSize = new System.Drawing.Size(857, 352);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.txtMarcaArt);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.btnCancelarArt);
@@ -271,7 +284,7 @@
             this.Controls.Add(this.lblNombreArt);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.pnlAgregarArt);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SeccionAgregarArtcs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionAgregarArtcs";
@@ -305,5 +318,6 @@
         private System.Windows.Forms.Button btnCancelarArt;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.ComboBox txtMarcaArt;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }

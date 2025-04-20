@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 using Dominio;
 using Gestion;
 using static System.Net.Mime.MediaTypeNames;
+using System.Configuration;
 
 namespace Actividad2PrograIII
 {
@@ -17,6 +19,7 @@ namespace Actividad2PrograIII
     {
 
         private Articulo articulo = null;
+        private OpenFileDialog archivo = null;
         public SeccionAgregarArtcs()
         {
             InitializeComponent();
@@ -69,6 +72,15 @@ namespace Actividad2PrograIII
                     gestion.AgregarArticulos(articulo);
                     MessageBox.Show("Agregado exitosamente");
                 }
+
+                // guardar imagen si la levantó localmente
+
+                if (archivo != null && !txbImgArt.Text.ToUpper().Contains("HTTP"))
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+                }
+
+                Close();
       
 
             }
@@ -176,5 +188,19 @@ namespace Actividad2PrograIII
             return true;
         }
 
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+            if (archivo.ShowDialog() == DialogResult.OK) 
+            {
+               txbImgArt.Text = archivo.FileName;
+               cargarImagen(archivo.FileName);
+
+                // guardar la imagen
+                //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+
+            }
+        }
     }
 }
