@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.panelMarcas = new System.Windows.Forms.Panel();
+            this.lblMarcas = new System.Windows.Forms.Label();
             this.lblBuscarMarca = new System.Windows.Forms.Label();
             this.txtBoxBusMarca = new System.Windows.Forms.TextBox();
-            this.btnBuscarMarca = new System.Windows.Forms.Button();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
-            this.lblMarcas = new System.Windows.Forms.Label();
             this.panelMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +49,17 @@
             this.panelMarcas.Name = "panelMarcas";
             this.panelMarcas.Size = new System.Drawing.Size(1200, 74);
             this.panelMarcas.TabIndex = 1;
+            // 
+            // lblMarcas
+            // 
+            this.lblMarcas.AutoSize = true;
+            this.lblMarcas.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarcas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMarcas.Location = new System.Drawing.Point(4, 9);
+            this.lblMarcas.Name = "lblMarcas";
+            this.lblMarcas.Size = new System.Drawing.Size(197, 71);
+            this.lblMarcas.TabIndex = 2;
+            this.lblMarcas.Text = "MARCAS";
             // 
             // lblBuscarMarca
             // 
@@ -69,16 +79,6 @@
             this.txtBoxBusMarca.TabIndex = 7;
             this.txtBoxBusMarca.TextChanged += new System.EventHandler(this.txtBoxBusMarca_TextChanged);
             this.txtBoxBusMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxBusMarca_KeyPress);
-            // 
-            // btnBuscarMarca
-            // 
-            this.btnBuscarMarca.Location = new System.Drawing.Point(435, 118);
-            this.btnBuscarMarca.Name = "btnBuscarMarca";
-            this.btnBuscarMarca.Size = new System.Drawing.Size(104, 42);
-            this.btnBuscarMarca.TabIndex = 8;
-            this.btnBuscarMarca.Text = "Buscar";
-            this.btnBuscarMarca.UseVisualStyleBackColor = true;
-            this.btnBuscarMarca.Click += new System.EventHandler(this.btnBuscarMarca_Click);
             // 
             // dgvMarcas
             // 
@@ -134,17 +134,6 @@
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
-            // lblMarcas
-            // 
-            this.lblMarcas.AutoSize = true;
-            this.lblMarcas.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMarcas.Location = new System.Drawing.Point(4, 9);
-            this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(197, 71);
-            this.lblMarcas.TabIndex = 2;
-            this.lblMarcas.Text = "MARCAS";
-            // 
             // SeccionMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -155,7 +144,6 @@
             this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
-            this.Controls.Add(this.btnBuscarMarca);
             this.Controls.Add(this.txtBoxBusMarca);
             this.Controls.Add(this.lblBuscarMarca);
             this.Controls.Add(this.panelMarcas);
@@ -177,7 +165,6 @@
         private System.Windows.Forms.Panel panelMarcas;
         private System.Windows.Forms.Label lblBuscarMarca;
         private System.Windows.Forms.TextBox txtBoxBusMarca;
-        private System.Windows.Forms.Button btnBuscarMarca;
         private System.Windows.Forms.DataGridView dgvMarcas;
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Button btnEditarMarca;

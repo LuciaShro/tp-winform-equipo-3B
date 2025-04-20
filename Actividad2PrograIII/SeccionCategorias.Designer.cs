@@ -33,7 +33,6 @@
             this.lblCategorias = new System.Windows.Forms.Label();
             this.lblFiltrarCategoria = new System.Windows.Forms.Label();
             this.txtboxFiltrarCategoria = new System.Windows.Forms.TextBox();
-            this.btnFiltrarCategoria = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnEditarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarCategoriaFisico = new System.Windows.Forms.Button();
@@ -95,16 +94,6 @@
             this.txtboxFiltrarCategoria.TextChanged += new System.EventHandler(this.txtboxFiltrarCategoria_TextChanged);
             this.txtboxFiltrarCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxFiltrarCategoria_KeyPress);
             // 
-            // btnFiltrarCategoria
-            // 
-            this.btnFiltrarCategoria.Location = new System.Drawing.Point(488, 152);
-            this.btnFiltrarCategoria.Name = "btnFiltrarCategoria";
-            this.btnFiltrarCategoria.Size = new System.Drawing.Size(104, 42);
-            this.btnFiltrarCategoria.TabIndex = 9;
-            this.btnFiltrarCategoria.Text = "Buscar";
-            this.btnFiltrarCategoria.UseVisualStyleBackColor = true;
-            this.btnFiltrarCategoria.Click += new System.EventHandler(this.btnFiltrarCategoria_Click);
-            // 
             // btnAgregarCategoria
             // 
             this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -150,7 +139,6 @@
             this.Controls.Add(this.btnEliminarCategoriaFisico);
             this.Controls.Add(this.btnEditarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
-            this.Controls.Add(this.btnFiltrarCategoria);
             this.Controls.Add(this.txtboxFiltrarCategoria);
             this.Controls.Add(this.lblFiltrarCategoria);
             this.Controls.Add(this.panel1);
@@ -175,7 +163,6 @@
         private System.Windows.Forms.Label lblCategorias;
         private System.Windows.Forms.Label lblFiltrarCategoria;
         private System.Windows.Forms.TextBox txtboxFiltrarCategoria;
-        private System.Windows.Forms.Button btnFiltrarCategoria;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Button btnEditarCategoria;
         private System.Windows.Forms.Button btnEliminarCategoriaFisico;
