@@ -61,13 +61,21 @@ namespace Actividad2PrograIII
             Marca seleccionado = new Marca();
             try
             {
-                DialogResult respuesta = MessageBox.Show("Seguro quiere eliminar el dato?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (respuesta == DialogResult.Yes)
+                if(dgvMarcas.CurrentRow != null)
                 {
-                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
-                    gestionMarca.EliminarMarca(seleccionado.Id);
-                    cargar();
+                    DialogResult respuesta = MessageBox.Show("Seguro quiere eliminar el dato?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                        gestionMarca.EliminarMarca(seleccionado.Id);
+                        cargar();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Selecciona una Marca para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
 
@@ -82,11 +90,18 @@ namespace Actividad2PrograIII
         private void btnEditarMarca_Click(object sender, EventArgs e)
         {
             Marca seleccionado;
-            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
-            
-            SeccionAgregarMarca modificar = new SeccionAgregarMarca(seleccionado);
-            modificar.ShowDialog();
-            cargar();
+            if(dgvMarcas.CurrentRow != null)
+            {
+                seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+
+                SeccionAgregarMarca modificar = new SeccionAgregarMarca(seleccionado);
+                modificar.ShowDialog();
+                cargar();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una Marca para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 

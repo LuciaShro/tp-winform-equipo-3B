@@ -45,11 +45,18 @@ namespace Actividad2PrograIII
         private void btnEditarCategoria_Click(object sender, EventArgs e)
         {
             Categoria seleccionada;
-            seleccionada = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+            if(dgvCategorias.CurrentRow != null)
+            {
+                seleccionada = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
 
-            SeccionAgregarCategoria editarCat = new SeccionAgregarCategoria(seleccionada);
-            editarCat.ShowDialog();
-            cargar();
+                SeccionAgregarCategoria editarCat = new SeccionAgregarCategoria(seleccionada);
+                editarCat.ShowDialog();
+                cargar();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una Categoria para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEliminarCategoriaFisico_Click(object sender, EventArgs e)
@@ -61,12 +68,19 @@ namespace Actividad2PrograIII
 
             try
             {
-                DialogResult resultado = MessageBox.Show("¿Estas seguro que queres eliminar esta categoría?", "Eliminado", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                if (resultado == DialogResult.Yes)
+                if(dgvCategorias.CurrentRow != null)
                 {
-                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
-                    categoria.eliminarCategoria(seleccionado.Id);
-                    cargar();
+                    DialogResult resultado = MessageBox.Show("¿Estas seguro que queres eliminar esta categoría?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                        categoria.eliminarCategoria(seleccionado.Id);
+                        cargar();
+                    }
+                }
+               else
+                {
+                    MessageBox.Show("Selecciona una Categoria para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

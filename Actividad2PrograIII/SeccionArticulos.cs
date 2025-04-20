@@ -182,10 +182,18 @@ namespace Actividad2PrograIII
         private void btnDetalleArt_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
-            SeccionDetalleArt detalle = new SeccionDetalleArt(seleccionado);
-            detalle.ShowDialog();
+            if(dgvArticulos.CurrentRow != null)
+            {
+                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+                SeccionDetalleArt detalle = new SeccionDetalleArt(seleccionado);
+                detalle.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un artículo para ver el detalle.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             
         }
 
