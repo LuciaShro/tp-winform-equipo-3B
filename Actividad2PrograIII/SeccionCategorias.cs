@@ -25,9 +25,9 @@ namespace Actividad2PrograIII
         {
             cargar();
 
-            cboCampo.Items.Add("Nombre");
-            cboCampo.Items.Add("Marca");
-            cboCampo.Items.Add("Categoria");
+            //cboCampo.Items.Add("Nombre");
+            //cboCampo.Items.Add("Marca");
+            //cboCampo.Items.Add("Categoria");
 
         }
 

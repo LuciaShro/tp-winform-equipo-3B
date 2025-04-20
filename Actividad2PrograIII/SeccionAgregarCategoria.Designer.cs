@@ -41,9 +41,10 @@
             // 
             this.pnlAgregarCategoria.BackColor = System.Drawing.Color.CadetBlue;
             this.pnlAgregarCategoria.Controls.Add(this.lblNuevaCategoria);
-            this.pnlAgregarCategoria.Location = new System.Drawing.Point(1, 0);
+            this.pnlAgregarCategoria.Location = new System.Drawing.Point(2, 0);
+            this.pnlAgregarCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlAgregarCategoria.Name = "pnlAgregarCategoria";
-            this.pnlAgregarCategoria.Size = new System.Drawing.Size(800, 50);
+            this.pnlAgregarCategoria.Size = new System.Drawing.Size(1200, 77);
             this.pnlAgregarCategoria.TabIndex = 0;
             // 
             // lblNuevaCategoria
@@ -51,9 +52,10 @@
             this.lblNuevaCategoria.AutoSize = true;
             this.lblNuevaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblNuevaCategoria.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblNuevaCategoria.Location = new System.Drawing.Point(12, 13);
+            this.lblNuevaCategoria.Location = new System.Drawing.Point(18, 20);
+            this.lblNuevaCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevaCategoria.Name = "lblNuevaCategoria";
-            this.lblNuevaCategoria.Size = new System.Drawing.Size(142, 20);
+            this.lblNuevaCategoria.Size = new System.Drawing.Size(208, 29);
             this.lblNuevaCategoria.TabIndex = 0;
             this.lblNuevaCategoria.Text = "Nueva Categoria";
             // 
@@ -61,53 +63,60 @@
             // 
             this.lblAgregarCategoria.AutoSize = true;
             this.lblAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAgregarCategoria.Location = new System.Drawing.Point(68, 135);
+            this.lblAgregarCategoria.Location = new System.Drawing.Point(102, 208);
+            this.lblAgregarCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgregarCategoria.Name = "lblAgregarCategoria";
-            this.lblAgregarCategoria.Size = new System.Drawing.Size(88, 17);
+            this.lblAgregarCategoria.Size = new System.Drawing.Size(119, 25);
             this.lblAgregarCategoria.TabIndex = 1;
             this.lblAgregarCategoria.Text = "Categoria: ";
             // 
             // txtAgregarCategoria
             // 
-            this.txtAgregarCategoria.Location = new System.Drawing.Point(155, 135);
+            this.txtAgregarCategoria.Location = new System.Drawing.Point(232, 208);
+            this.txtAgregarCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAgregarCategoria.Name = "txtAgregarCategoria";
-            this.txtAgregarCategoria.Size = new System.Drawing.Size(183, 20);
+            this.txtAgregarCategoria.Size = new System.Drawing.Size(272, 26);
             this.txtAgregarCategoria.TabIndex = 2;
             // 
             // btnAceptarCategoria
             // 
+            this.btnAceptarCategoria.BackColor = System.Drawing.SystemColors.Window;
             this.btnAceptarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarCategoria.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAceptarCategoria.Location = new System.Drawing.Point(61, 238);
+            this.btnAceptarCategoria.Location = new System.Drawing.Point(92, 366);
+            this.btnAceptarCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAceptarCategoria.Name = "btnAceptarCategoria";
-            this.btnAceptarCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptarCategoria.Size = new System.Drawing.Size(112, 35);
             this.btnAceptarCategoria.TabIndex = 3;
             this.btnAceptarCategoria.Text = "Aceptar";
-            this.btnAceptarCategoria.UseVisualStyleBackColor = true;
+            this.btnAceptarCategoria.UseVisualStyleBackColor = false;
             this.btnAceptarCategoria.Click += new System.EventHandler(this.btnAceptarCategoria_Click);
             // 
             // btnCancelarCategoria
             // 
+            this.btnCancelarCategoria.BackColor = System.Drawing.SystemColors.Window;
             this.btnCancelarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelarCategoria.Location = new System.Drawing.Point(253, 238);
+            this.btnCancelarCategoria.Location = new System.Drawing.Point(380, 366);
+            this.btnCancelarCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelarCategoria.Name = "btnCancelarCategoria";
-            this.btnCancelarCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarCategoria.Size = new System.Drawing.Size(112, 35);
             this.btnCancelarCategoria.TabIndex = 4;
             this.btnCancelarCategoria.Text = "Cancelar";
-            this.btnCancelarCategoria.UseVisualStyleBackColor = true;
+            this.btnCancelarCategoria.UseVisualStyleBackColor = false;
             this.btnCancelarCategoria.Click += new System.EventHandler(this.btnCancelarCategoria_Click);
             // 
             // SeccionAgregarCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 299);
+            this.ClientSize = new System.Drawing.Size(606, 460);
             this.Controls.Add(this.btnCancelarCategoria);
             this.Controls.Add(this.btnAceptarCategoria);
             this.Controls.Add(this.txtAgregarCategoria);
             this.Controls.Add(this.lblAgregarCategoria);
             this.Controls.Add(this.pnlAgregarCategoria);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SeccionAgregarCategoria";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

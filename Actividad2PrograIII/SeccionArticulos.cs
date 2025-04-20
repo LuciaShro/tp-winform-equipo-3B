@@ -160,6 +160,22 @@ namespace Actividad2PrograIII
             
         }
 
+        private void btnDetalleArt_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
+            SeccionDetalleArt detalle = new SeccionDetalleArt(seleccionado);
+            detalle.ShowDialog();
+            
+        }
+
+        //private void MostrarDetalleArticulo()
+        //{
+        //    Articulo seleccionado;
+        //    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+        //    SeccionDetalleArt detalle = new SeccionDetalleArt(seleccionado);
+        //    detalle.ShowDialog();
+        //}
     }
 }

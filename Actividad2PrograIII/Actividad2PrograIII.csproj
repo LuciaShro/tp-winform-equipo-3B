@@ -84,6 +84,12 @@
     <Compile Include="SeccionCategorias.Designer.cs">
       <DependentUpon>SeccionCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeccionDetalleArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeccionDetalleArt.Designer.cs">
+      <DependentUpon>SeccionDetalleArt.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeccionMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SeccionCategorias.resx">
       <DependentUpon>SeccionCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeccionDetalleArt.resx">
+      <DependentUpon>SeccionDetalleArt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeccionMarca.resx">
       <DependentUpon>SeccionMarca.cs</DependentUpon>

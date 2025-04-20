@@ -165,7 +165,7 @@
             // 
             this.btnEditarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCategoria.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEditarCategoria.Location = new System.Drawing.Point(476, 589);
+            this.btnEditarCategoria.Location = new System.Drawing.Point(488, 589);
             this.btnEditarCategoria.Name = "btnEditarCategoria";
             this.btnEditarCategoria.Size = new System.Drawing.Size(216, 49);
             this.btnEditarCategoria.TabIndex = 12;

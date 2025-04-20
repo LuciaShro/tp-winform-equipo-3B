@@ -87,7 +87,7 @@ namespace Actividad2PrograIII
                 cboCategoria.DataSource = cat.listarCategoria();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Nombre";
-;                txtMarcaArt.DataSource = marca.listarMarca();
+                txtMarcaArt.DataSource = marca.listarMarca();
                 txtMarcaArt.ValueMember = "Id";
                 txtMarcaArt.DisplayMember = "Nombre";
 
