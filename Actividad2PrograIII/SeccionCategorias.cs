@@ -25,10 +25,6 @@ namespace Actividad2PrograIII
         {
             cargar();
 
-            /*cboCampo.Items.Add("Nombre");
-            cboCampo.Items.Add("Marca");
-            cboCampo.Items.Add("Categoria");*/
-
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
