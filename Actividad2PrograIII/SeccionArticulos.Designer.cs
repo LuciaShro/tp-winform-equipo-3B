@@ -77,6 +77,7 @@
             // 
             // lblBuscarArt
             // 
+            this.lblBuscarArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBuscarArt.AutoSize = true;
             this.lblBuscarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscarArt.Location = new System.Drawing.Point(8, 62);
@@ -88,6 +89,7 @@
             // 
             // btnFiltroArt
             // 
+            this.btnFiltroArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFiltroArt.Location = new System.Drawing.Point(222, 58);
             this.btnFiltroArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroArt.Name = "btnFiltroArt";
@@ -99,6 +101,7 @@
             // 
             // btnLimpiarArt
             // 
+            this.btnLimpiarArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLimpiarArt.BackColor = System.Drawing.Color.CadetBlue;
             this.btnLimpiarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarArt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -113,6 +116,7 @@
             // 
             // txtBoxBuscarArt
             // 
+            this.txtBoxBuscarArt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBoxBuscarArt.Location = new System.Drawing.Point(80, 62);
             this.txtBoxBuscarArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBuscarArt.Name = "txtBoxBuscarArt";
@@ -122,6 +126,7 @@
             // 
             // btnAgregarArt
             // 
+            this.btnAgregarArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnAgregarArt.Location = new System.Drawing.Point(26, 401);
@@ -135,6 +140,7 @@
             // 
             // btnEditarArt
             // 
+            this.btnEditarArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnEditarArt.Location = new System.Drawing.Point(204, 401);
@@ -148,6 +154,7 @@
             // 
             // btnEliminarArt
             // 
+            this.btnEliminarArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminarArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnEliminarArt.Location = new System.Drawing.Point(371, 401);
@@ -161,17 +168,21 @@
             // 
             // pictureBoxArt
             // 
+            this.pictureBoxArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxArt.BackColor = System.Drawing.Color.Ivory;
-            this.pictureBoxArt.Location = new System.Drawing.Point(565, 176);
+            this.pictureBoxArt.Location = new System.Drawing.Point(544, 169);
             this.pictureBoxArt.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxArt.Name = "pictureBoxArt";
-            this.pictureBoxArt.Size = new System.Drawing.Size(195, 209);
+            this.pictureBoxArt.Size = new System.Drawing.Size(216, 216);
             this.pictureBoxArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxArt.TabIndex = 12;
             this.pictureBoxArt.TabStop = false;
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.Ivory;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -182,12 +193,13 @@
             this.dgvArticulos.RowHeadersWidth = 62;
             this.dgvArticulos.RowTemplate.Height = 28;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(531, 209);
+            this.dgvArticulos.Size = new System.Drawing.Size(505, 209);
             this.dgvArticulos.TabIndex = 13;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // lblCampo
             // 
+            this.lblCampo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCampo.AutoSize = true;
             this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblCampo.Location = new System.Drawing.Point(6, 111);
@@ -198,6 +210,7 @@
             // 
             // lblCriterio
             // 
+            this.lblCriterio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCriterio.AutoSize = true;
             this.lblCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblCriterio.Location = new System.Drawing.Point(224, 111);
@@ -208,6 +221,7 @@
             // 
             // lblFiltro
             // 
+            this.lblFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblFiltro.Location = new System.Drawing.Point(444, 111);
@@ -218,6 +232,7 @@
             // 
             // cboCampo
             // 
+            this.cboCampo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
             this.cboCampo.Location = new System.Drawing.Point(80, 110);
@@ -228,6 +243,7 @@
             // 
             // cboCriterio
             // 
+            this.cboCriterio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
             this.cboCriterio.Location = new System.Drawing.Point(302, 110);
@@ -237,6 +253,7 @@
             // 
             // txtFlitro
             // 
+            this.txtFlitro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFlitro.Location = new System.Drawing.Point(505, 111);
             this.txtFlitro.Name = "txtFlitro";
             this.txtFlitro.Size = new System.Drawing.Size(138, 20);
@@ -244,6 +261,7 @@
             // 
             // btnFiltrar
             // 
+            this.btnFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFiltrar.Location = new System.Drawing.Point(649, 110);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(92, 23);
@@ -254,6 +272,7 @@
             // 
             // btnDetalleArt
             // 
+            this.btnDetalleArt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDetalleArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalleArt.ForeColor = System.Drawing.Color.CadetBlue;
             this.btnDetalleArt.Location = new System.Drawing.Point(580, 401);
@@ -292,6 +311,7 @@
             this.Name = "SeccionArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionArticulos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SeccionArticulos_Load);
             this.panelArticulos.ResumeLayout(false);
             this.panelArticulos.PerformLayout();
