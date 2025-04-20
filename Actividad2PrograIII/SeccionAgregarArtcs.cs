@@ -43,6 +43,8 @@ namespace Actividad2PrograIII
 
             try
             {
+                if (validarCampos())
+                    return;
                 if (articulo == null)
                    articulo = new Articulo();
                 articulo.codArticulo = txbCodigoArt.Text;
@@ -83,13 +85,16 @@ namespace Actividad2PrograIII
 
             
             try
-            {
+            { 
                 cboCategoria.DataSource = cat.listarCategoria();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Nombre";
                 txtMarcaArt.DataSource = marca.listarMarca();
                 txtMarcaArt.ValueMember = "Id";
                 txtMarcaArt.DisplayMember = "Nombre";
+
+                txtMarcaArt.SelectedIndex = -1;
+                cboCategoria.SelectedIndex = -1;
 
                 if (articulo != null)
                 {
@@ -130,5 +135,46 @@ namespace Actividad2PrograIII
         {
             cargarImagen(txbImgArt.Text);
         }
+
+        private bool validarCampos()
+        {
+            if(cboCategoria.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, seleccione una categoria.");
+                return true;
+            }
+            if(txtMarcaArt.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, seleccione una marca");
+                return true;
+            }
+
+            if (string.IsNullOrEmpty(txbCodigoArt.Text) || string.IsNullOrEmpty(txbNombreARt.Text) || string.IsNullOrEmpty(txbCodigoArt.Text) ||
+                string.IsNullOrEmpty(txbDescArt.Text) || string.IsNullOrEmpty(txbPrecioArt.Text))
+            {
+                MessageBox.Show("Hay campos vacios.");
+                return true;
+            } 
+
+            if (!(soloNumeros(txbPrecioArt.Text)))
+            {
+                MessageBox.Show("Ingeso invalido. Recorda que el precio solo se aceptan valores numericos");
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach(char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+
+            return true;
+        }
+
     }
 }
