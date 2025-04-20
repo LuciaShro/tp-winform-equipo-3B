@@ -42,6 +42,7 @@ namespace Actividad2PrograIII
         private void ocultarColumnas()
         {
             dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["IDArticulo"].Visible = false;
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -216,6 +217,14 @@ namespace Actividad2PrograIII
 
 
             return false;
+        }
+
+        private void btnLimpiarArt_Click(object sender, EventArgs e)
+        {
+            GestionArticulos gestion = new GestionArticulos();
+
+            dgvArticulos.DataSource = gestion.Filtrar("", "", "");
+
         }
 
         //private void MostrarDetalleArticulo()

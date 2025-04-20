@@ -31,13 +31,9 @@
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCategorias = new System.Windows.Forms.Label();
-            this.lblBuscarCategoria = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscarCategoria = new System.Windows.Forms.Button();
             this.lblFiltrarCategoria = new System.Windows.Forms.Label();
             this.txtboxFiltrarCategoria = new System.Windows.Forms.TextBox();
             this.btnFiltrarCategoria = new System.Windows.Forms.Button();
-            this.btnLimpiarCategoria = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnEditarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarCategoriaFisico = new System.Windows.Forms.Button();
@@ -80,47 +76,19 @@
             this.lblCategorias.TabIndex = 1;
             this.lblCategorias.Text = "CATEGORIAS";
             // 
-            // lblBuscarCategoria
-            // 
-            this.lblBuscarCategoria.AutoSize = true;
-            this.lblBuscarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarCategoria.Location = new System.Drawing.Point(545, 136);
-            this.lblBuscarCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBuscarCategoria.Name = "lblBuscarCategoria";
-            this.lblBuscarCategoria.Size = new System.Drawing.Size(100, 29);
-            this.lblBuscarCategoria.TabIndex = 3;
-            this.lblBuscarCategoria.Text = "Buscar:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(643, 137);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(205, 26);
-            this.txtBuscar.TabIndex = 4;
-            // 
-            // btnBuscarCategoria
-            // 
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(859, 129);
-            this.btnBuscarCategoria.Name = "btnBuscarCategoria";
-            this.btnBuscarCategoria.Size = new System.Drawing.Size(104, 42);
-            this.btnBuscarCategoria.TabIndex = 5;
-            this.btnBuscarCategoria.Text = "Buscar";
-            this.btnBuscarCategoria.UseVisualStyleBackColor = true;
-            // 
             // lblFiltrarCategoria
             // 
             this.lblFiltrarCategoria.AutoSize = true;
             this.lblFiltrarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrarCategoria.Location = new System.Drawing.Point(65, 137);
+            this.lblFiltrarCategoria.Location = new System.Drawing.Point(164, 157);
             this.lblFiltrarCategoria.Name = "lblFiltrarCategoria";
-            this.lblFiltrarCategoria.Size = new System.Drawing.Size(89, 29);
+            this.lblFiltrarCategoria.Size = new System.Drawing.Size(100, 29);
             this.lblFiltrarCategoria.TabIndex = 6;
-            this.lblFiltrarCategoria.Text = "Filtrar:";
+            this.lblFiltrarCategoria.Text = "Buscar:";
             // 
             // txtboxFiltrarCategoria
             // 
-            this.txtboxFiltrarCategoria.Location = new System.Drawing.Point(155, 140);
+            this.txtboxFiltrarCategoria.Location = new System.Drawing.Point(270, 160);
             this.txtboxFiltrarCategoria.Name = "txtboxFiltrarCategoria";
             this.txtboxFiltrarCategoria.Size = new System.Drawing.Size(205, 26);
             this.txtboxFiltrarCategoria.TabIndex = 8;
@@ -129,25 +97,13 @@
             // 
             // btnFiltrarCategoria
             // 
-            this.btnFiltrarCategoria.Location = new System.Drawing.Point(383, 132);
+            this.btnFiltrarCategoria.Location = new System.Drawing.Point(488, 152);
             this.btnFiltrarCategoria.Name = "btnFiltrarCategoria";
             this.btnFiltrarCategoria.Size = new System.Drawing.Size(104, 42);
             this.btnFiltrarCategoria.TabIndex = 9;
-            this.btnFiltrarCategoria.Text = "Filtrar";
+            this.btnFiltrarCategoria.Text = "Buscar";
             this.btnFiltrarCategoria.UseVisualStyleBackColor = true;
             this.btnFiltrarCategoria.Click += new System.EventHandler(this.btnFiltrarCategoria_Click);
-            // 
-            // btnLimpiarCategoria
-            // 
-            this.btnLimpiarCategoria.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnLimpiarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCategoria.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpiarCategoria.Location = new System.Drawing.Point(1008, 123);
-            this.btnLimpiarCategoria.Name = "btnLimpiarCategoria";
-            this.btnLimpiarCategoria.Size = new System.Drawing.Size(118, 48);
-            this.btnLimpiarCategoria.TabIndex = 10;
-            this.btnLimpiarCategoria.Text = "Limpiar";
-            this.btnLimpiarCategoria.UseVisualStyleBackColor = false;
             // 
             // btnAgregarCategoria
             // 
@@ -194,13 +150,9 @@
             this.Controls.Add(this.btnEliminarCategoriaFisico);
             this.Controls.Add(this.btnEditarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
-            this.Controls.Add(this.btnLimpiarCategoria);
             this.Controls.Add(this.btnFiltrarCategoria);
             this.Controls.Add(this.txtboxFiltrarCategoria);
             this.Controls.Add(this.lblFiltrarCategoria);
-            this.Controls.Add(this.btnBuscarCategoria);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.lblBuscarCategoria);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCategorias);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -221,13 +173,9 @@
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCategorias;
-        private System.Windows.Forms.Label lblBuscarCategoria;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnBuscarCategoria;
         private System.Windows.Forms.Label lblFiltrarCategoria;
         private System.Windows.Forms.TextBox txtboxFiltrarCategoria;
         private System.Windows.Forms.Button btnFiltrarCategoria;
-        private System.Windows.Forms.Button btnLimpiarCategoria;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Button btnEditarCategoria;
         private System.Windows.Forms.Button btnEliminarCategoriaFisico;
