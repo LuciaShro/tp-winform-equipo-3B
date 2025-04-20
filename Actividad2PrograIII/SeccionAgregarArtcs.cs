@@ -77,7 +77,11 @@ namespace Actividad2PrograIII
 
                 if (archivo != null && !txbImgArt.Text.ToUpper().Contains("HTTP"))
                 {
-                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+                    if (!Directory.Exists(ConfigurationManager.AppSettings["images-folder"])) 
+                    {
+                        Directory.CreateDirectory(ConfigurationManager.AppSettings["images-folder"]);
+                    }
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName, true);
                 }
 
                 Close();
