@@ -36,6 +36,7 @@ namespace Actividad2PrograIII
             {
                 ListaMarcas = marca.listarMarca();
                 dgvMarcas.DataSource = marca.listarMarca();
+                dgvMarcas.Columns["Id"].Visible = false;
 
             }
             catch (Exception ex)

@@ -39,7 +39,7 @@ namespace Actividad2PrograIII
             GestionCategoria categoria = new GestionCategoria();
             ListaCategorias = categoria.listarCategoria();
             dgvCategorias.DataSource = categoria.listarCategoria();
-            dgvCategorias.Columns["Id"].Visible = true;
+            dgvCategorias.Columns["Id"].Visible = false;
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)

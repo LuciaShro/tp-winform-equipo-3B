@@ -42,6 +42,7 @@ namespace Actividad2PrograIII
         private void ocultarColumnas()
         {
             dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["IDArticulo"].Visible = false;
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
