@@ -32,10 +32,7 @@ namespace Gestion
             }
         }
 
-        //Buscar marca
-        //public Marca BuscarMarca(int IdMarca)
-        //{
-        //}
+
 
         //Listar marca
         public List<Marca> listarMarca()
@@ -54,11 +51,6 @@ namespace Gestion
                     aux.Id = (int)datos.Lector["Id"];
 
 
-                    // forma de realizar validacion null
-                    /*
-                    if(!(datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Descripcion"))))
-                    aux.Nombre = (string)datos.Lector["Descripcion"]; 
-                    */
                     if (!(datos.Lector["Descripcion"] is DBNull))
                       aux.Nombre = (string)datos.Lector["Descripcion"];
 

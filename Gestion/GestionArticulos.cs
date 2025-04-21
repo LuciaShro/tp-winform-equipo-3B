@@ -234,22 +234,3 @@ namespace Gestion
         }
     }
 
-//Modificar articulos
-//public bool ModificarArticulo(int codArticulo)
-//{
-//}
-
-//Eliminar articulos
-//public bool EliminarArticulo(int codArticulo) 
-//{ 
-//}
-
-//Buscar articulos
-//public Articulo BuscarArticulo(int codArticulo)
-//{
-//}
-
-//Listar articulo
-//public void ListarArticulos()
-//{
-//}

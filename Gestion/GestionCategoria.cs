@@ -11,10 +11,6 @@ namespace Gestion
     public class GestionCategoria
     {
 
-        //Buscar Categoria
-        //public Categoria BuscarCategoria(int IdCategoria)
-        //{
-        //}
 
 
         SqlConnection conexion = new SqlConnection();
