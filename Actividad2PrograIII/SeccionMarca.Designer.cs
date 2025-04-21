@@ -46,7 +46,7 @@
             this.panelMarcas.Controls.Add(this.lblMarcas);
             this.panelMarcas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMarcas.Location = new System.Drawing.Point(0, 0);
-            this.panelMarcas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMarcas.Margin = new System.Windows.Forms.Padding(2);
             this.panelMarcas.Name = "panelMarcas";
             this.panelMarcas.Size = new System.Drawing.Size(800, 48);
             this.panelMarcas.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.lblBuscarMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBuscarMarca.AutoSize = true;
             this.lblBuscarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarMarca.Location = new System.Drawing.Point(67, 79);
+            this.lblBuscarMarca.Location = new System.Drawing.Point(158, 83);
             this.lblBuscarMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBuscarMarca.Name = "lblBuscarMarca";
             this.lblBuscarMarca.Size = new System.Drawing.Size(70, 20);
@@ -78,8 +78,8 @@
             // txtBoxBusMarca
             // 
             this.txtBoxBusMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBoxBusMarca.Location = new System.Drawing.Point(138, 82);
-            this.txtBoxBusMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxBusMarca.Location = new System.Drawing.Point(232, 83);
+            this.txtBoxBusMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxBusMarca.Name = "txtBoxBusMarca";
             this.txtBoxBusMarca.Size = new System.Drawing.Size(138, 20);
             this.txtBoxBusMarca.TabIndex = 0;
@@ -92,13 +92,13 @@
             this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcas.Location = new System.Drawing.Point(71, 118);
+            this.dgvMarcas.Location = new System.Drawing.Point(165, 127);
             this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 62;
             this.dgvMarcas.RowTemplate.Height = 28;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(531, 209);
+            this.dgvMarcas.Size = new System.Drawing.Size(333, 222);
             this.dgvMarcas.TabIndex = 14;
             // 
             // btnAgregarMarca
@@ -106,7 +106,7 @@
             this.btnAgregarMarca.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMarca.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(71, 356);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(71, 368);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(144, 32);
             this.btnAgregarMarca.TabIndex = 1;
@@ -119,7 +119,7 @@
             this.btnEditarMarca.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarMarca.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEditarMarca.Location = new System.Drawing.Point(270, 356);
+            this.btnEditarMarca.Location = new System.Drawing.Point(270, 368);
             this.btnEditarMarca.Name = "btnEditarMarca";
             this.btnEditarMarca.Size = new System.Drawing.Size(144, 32);
             this.btnEditarMarca.TabIndex = 2;
@@ -132,7 +132,7 @@
             this.btnEliminarMarca.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMarca.ForeColor = System.Drawing.Color.CadetBlue;
-            this.btnEliminarMarca.Location = new System.Drawing.Point(457, 356);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(457, 368);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(144, 32);
             this.btnEliminarMarca.TabIndex = 3;
