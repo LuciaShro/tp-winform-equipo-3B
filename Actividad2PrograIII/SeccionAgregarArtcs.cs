@@ -12,6 +12,7 @@ using Dominio;
 using Gestion;
 using static System.Net.Mime.MediaTypeNames;
 using System.Configuration;
+using System.Globalization;
 
 namespace Actividad2PrograIII
 {
@@ -53,7 +54,8 @@ namespace Actividad2PrograIII
                 articulo.codArticulo = txbCodigoArt.Text;
                 articulo.Nombre = txbNombreARt.Text;
                 articulo.Descripcion = txbDescArt.Text;
-                articulo.Precio = decimal.Parse(txbPrecioArt.Text);
+                //articulo.Precio = decimal.Parse(txbPrecioArt.Text);
+                articulo.Precio = decimal.Parse(txbPrecioArt.Text.Replace(".", ""));
                 articulo.Marca = (Marca)txtMarcaArt.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
                 articulo.Imagen = new Imagen();
@@ -117,7 +119,9 @@ namespace Actividad2PrograIII
                     txbCodigoArt.Text = articulo.codArticulo;
                     txbNombreARt.Text = articulo.Nombre;
                     txbDescArt.Text = articulo.Descripcion;
-                    txbPrecioArt.Text = articulo.Precio.ToString();
+                    //txbPrecioArt.Text = articulo.Precio.ToString(C"0.00", CultureInfo.InvariantCulture);
+                    txbPrecioArt.Text = articulo.Precio.ToString("#,0", CultureInfo.InvariantCulture);
+                    //txbPrecioArt.Text = articulo.Precio.ToString();
                     txtMarcaArt.Text = articulo.Marca.Id.ToString();
                     //txbImgArt.Text = articulo.Marca.Id.ToString();
                     txbImgArt.Text = articulo.Imagen.ImagenURL;
@@ -170,26 +174,17 @@ namespace Actividad2PrograIII
             {
                 MessageBox.Show("Hay campos vacios.");
                 return true;
-            } 
+            }
+            string precioTexto = txbPrecioArt.Text.Replace(".", "");
 
-            if (!(soloNumeros(txbPrecioArt.Text)))
+            if (!decimal.TryParse(precioTexto, out _))
             {
-                MessageBox.Show("Ingeso invalido. Recorda que el precio solo se aceptan valores numericos");
+                MessageBox.Show("Ingreso inválido. El precio debe contener solo números y puntos como separadores de miles.");
                 return true;
             }
 
+
             return false;
-        }
-
-        private bool soloNumeros(string cadena)
-        {
-            foreach(char caracter in cadena)
-            {
-                if (!(char.IsNumber(caracter)))
-                    return false;
-            }
-
-            return true;
         }
 
         private void btnAgregarImagen_Click(object sender, EventArgs e)
